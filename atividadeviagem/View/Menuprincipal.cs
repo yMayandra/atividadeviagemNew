@@ -16,5 +16,35 @@ namespace atividadeviagem.View
         {
             InitializeComponent();
         }
+
+        private void Menuprincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pacoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
