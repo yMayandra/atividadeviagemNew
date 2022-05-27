@@ -24,7 +24,7 @@ namespace atividadeviagem.View
 
         private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,6 +45,30 @@ namespace atividadeviagem.View
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarCliente cliente = new CadastrarCliente();
+            cliente.Show();
+        }
+
+        private void cadasrtrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarFuncionario funcionario = new CadastrarFuncionario();
+            funcionario.Show();
+        }
+
+        private void casatrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastraPacote pacote = new CadastraPacote();
+            pacote.Show();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CasdastrarVenda venda = new CasdastrarVenda();
+            venda.Show();
         }
     }
 }

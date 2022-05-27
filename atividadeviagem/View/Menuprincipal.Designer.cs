@@ -49,7 +49,7 @@ namespace atividadeviagem.View
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Aqua;
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
@@ -65,7 +65,7 @@ namespace atividadeviagem.View
             // 
             // arquivoToolStripMenuItem
             // 
-            this.arquivoToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.arquivoToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.arquivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
@@ -74,7 +74,7 @@ namespace atividadeviagem.View
             // 
             // clienteToolStripMenuItem
             // 
-            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
             this.visualizarToolStripMenuItem});
@@ -88,6 +88,7 @@ namespace atividadeviagem.View
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem
             // 
@@ -97,7 +98,7 @@ namespace atividadeviagem.View
             // 
             // funcionarioToolStripMenuItem
             // 
-            this.funcionarioToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.funcionarioToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.funcionarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadasrtrarToolStripMenuItem,
             this.visualizarToolStripMenuItem1});
@@ -109,18 +110,19 @@ namespace atividadeviagem.View
             // cadasrtrarToolStripMenuItem
             // 
             this.cadasrtrarToolStripMenuItem.Name = "cadasrtrarToolStripMenuItem";
-            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
-            this.cadasrtrarToolStripMenuItem.Text = "Cadasrtrar ";
+            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadasrtrarToolStripMenuItem.Text = "Cadastrar ";
+            this.cadasrtrarToolStripMenuItem.Click += new System.EventHandler(this.cadasrtrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem1
             // 
             this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(147, 24);
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.visualizarToolStripMenuItem1.Text = "Visualizar";
             // 
             // pacoteToolStripMenuItem
             // 
-            this.pacoteToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.pacoteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.pacoteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.casatrarToolStripMenuItem,
             this.visualizarToolStripMenuItem2});
@@ -132,18 +134,19 @@ namespace atividadeviagem.View
             // casatrarToolStripMenuItem
             // 
             this.casatrarToolStripMenuItem.Name = "casatrarToolStripMenuItem";
-            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
-            this.casatrarToolStripMenuItem.Text = "Casatrar";
+            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.casatrarToolStripMenuItem.Text = "Cadastrar";
+            this.casatrarToolStripMenuItem.Click += new System.EventHandler(this.casatrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem2
             // 
             this.visualizarToolStripMenuItem2.Name = "visualizarToolStripMenuItem2";
-            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(139, 24);
+            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.visualizarToolStripMenuItem2.Text = "Visualizar ";
             // 
             // vendaToolStripMenuItem
             // 
-            this.vendaToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.vendaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
             this.codigoDeVendaToolStripMenuItem});
@@ -155,13 +158,14 @@ namespace atividadeviagem.View
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.registrarToolStripMenuItem.Text = "Registrar ";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // codigoDeVendaToolStripMenuItem
             // 
             this.codigoDeVendaToolStripMenuItem.Name = "codigoDeVendaToolStripMenuItem";
-            this.codigoDeVendaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.codigoDeVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.codigoDeVendaToolStripMenuItem.Text = "Visualizar";
             // 
             // Menuprincipal
