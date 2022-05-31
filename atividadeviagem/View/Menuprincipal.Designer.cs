@@ -70,7 +70,6 @@ namespace atividadeviagem.View
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
             this.arquivoToolStripMenuItem.Text = "Sair ";
-            this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -81,19 +80,18 @@ namespace atividadeviagem.View
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.clienteToolStripMenuItem.Text = "Cliente";
-            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem
             // 
             this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.visualizarToolStripMenuItem.Text = "Visualizar";
             // 
             // funcionarioToolStripMenuItem
@@ -105,19 +103,18 @@ namespace atividadeviagem.View
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(92, 23);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
-            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // cadasrtrarToolStripMenuItem
             // 
             this.cadasrtrarToolStripMenuItem.Name = "cadasrtrarToolStripMenuItem";
-            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.cadasrtrarToolStripMenuItem.Text = "Cadastrar ";
             this.cadasrtrarToolStripMenuItem.Click += new System.EventHandler(this.cadasrtrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem1
             // 
             this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.visualizarToolStripMenuItem1.Text = "Visualizar";
             // 
             // pacoteToolStripMenuItem
@@ -129,7 +126,6 @@ namespace atividadeviagem.View
             this.pacoteToolStripMenuItem.Name = "pacoteToolStripMenuItem";
             this.pacoteToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.pacoteToolStripMenuItem.Text = "Pacote";
-            this.pacoteToolStripMenuItem.Click += new System.EventHandler(this.pacoteToolStripMenuItem_Click);
             // 
             // casatrarToolStripMenuItem
             // 
@@ -153,7 +149,6 @@ namespace atividadeviagem.View
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.vendaToolStripMenuItem.Text = "Venda ";
-            this.vendaToolStripMenuItem.Click += new System.EventHandler(this.vendaToolStripMenuItem_Click);
             // 
             // registrarToolStripMenuItem
             // 
@@ -179,7 +174,6 @@ namespace atividadeviagem.View
             this.MaximizeBox = false;
             this.Name = "Menuprincipal";
             this.Text = "Sistema Gerenciador de Viagens ";
-            this.Load += new System.EventHandler(this.Menuprincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
