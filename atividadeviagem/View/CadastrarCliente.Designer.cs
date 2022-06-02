@@ -40,6 +40,7 @@ namespace atividadeviagem.View
             this.pbxImage = new System.Windows.Forms.PictureBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnImage = new System.Windows.Forms.Button();
+            this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +102,7 @@ namespace atividadeviagem.View
             // 
             this.tbxSenha.Location = new System.Drawing.Point(81, 236);
             this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(193, 23);
             this.tbxSenha.TabIndex = 6;
             // 
@@ -130,6 +132,7 @@ namespace atividadeviagem.View
             this.btnImage.TabIndex = 9;
             this.btnImage.Text = "Pesquisar";
             this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // CadastrarCliente
             // 
@@ -168,5 +171,6 @@ namespace atividadeviagem.View
         private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImage;
     }
 }

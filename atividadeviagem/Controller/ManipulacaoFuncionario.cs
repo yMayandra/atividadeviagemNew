@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using atividadeviagem.Model;
+using System.Windows.Forms;
 
 namespace atividadeviagem.Controller
 {
@@ -16,11 +18,22 @@ namespace atividadeviagem.Controller
             SqlCommand cmd = new SqlCommand("pCadastrarFuncionario", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-           /* try
+            try
             {
-                cmd.Parameters.AddWithValue("@nomeFun", "");
-                cmd.Parameters.AddWithValue("@emailFun", "");
-                cmd.Parameters.AddWithValue("@senhaFun", "");*/
+                cmd.Parameters.AddWithValue("@nomeFun",Funcionario.NomeFun);
+                cmd.Parameters.AddWithValue("@emailFun",Funcionario.EmailFun);
+                cmd.Parameters.AddWithValue("@senhaFun",Funcionario.SenhaFun);
+
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codFun", SqlDbType.Int);
+                nv.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                var resposta =MessageBox.Show("Cadastro Efetivado com Sucesso, deseja efetuar um novo reistro?","Atenção", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(resposta == DialogResult.Yes)
+                {
+                 
+                }
             }
     }
 }

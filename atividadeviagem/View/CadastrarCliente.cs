@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using atividadeviagem.Model;
+using atividadeviagem.Controller;
+using System.IO;
 
 namespace atividadeviagem.View
 {
@@ -24,9 +27,52 @@ namespace atividadeviagem.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (tbxNome.Text == "" | tbxEmail.Text =="" | tbxSenha.Text == "" |pbxImage.Image == null)
+            if (tbxNome.Text == "" | tbxEmail.Text == "" | tbxSenha.Text == "" | pbxImage.Image == null)
             {
                 MessageBox.Show("Preencha todos os campos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Cliente.NomeCli = tbxNome.Text;
+                Cliente.EmailCli = tbxEmail.Text;
+                Cliente.SenhaCli = tbxSenha.Text;
+                if (pbxImage.Image!=null)
+                {
+                    MemoryStream memoryStream = new MemoryStream();
+
+                    pbxImage.Image.Save(memoryStream, pbxImage.Image.RawFormat);
+                    Cliente.ImageCli = memoryStream.ToArray();
+
+
+                    ManipulacaoCliente manipulacaoCliente = new ManipulacaoCliente();
+                    manipulacaoCliente.cadastrarCliente();
+                }
+            }
+
+            LimparTela();
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            openFileDialogImage.Filter = "Escolha uma imagem (*.jpg*.png*.jpeg*)" + "|*.jpg*.png*.jpeg";
+            if (openFileDialogImage.ShowDialog() == DialogResult.OK)
+            {
+                pbxImage.Image = Image.FromFile(openFileDialogImage.FileName);
+            }
+          
+        }
+        public void LimparTela()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is TextBox)
+                {
+                    ctl.Text = String.Empty;
+                }
+                if(ctl is PictureBox)
+                {
+                    pbxImage.Image = null;
+                }
             }
         }
     }
