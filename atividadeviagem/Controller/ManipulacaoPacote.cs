@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using atividadeviagem.Model;
+using System.Windows.Forms;
+
 
 namespace atividadeviagem.Controller
 {
@@ -16,18 +19,40 @@ namespace atividadeviagem.Controller
             SqlCommand cmd = new SqlCommand("pCadastrarPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-           /* try
+            try
             {
-                cmd.Parameters.AddWithValue("@valorPac", "");
-                cmd.Parameters.AddWithValue("@origemPac", "");
-                cmd.Parameters.AddWithValue("@destinoPac", "");
-                cmd.Parameters.AddWithValue("@destinoPac", "");
-                cmd.Parameters.AddWithValue("@dataPac", "");
-                cmd.Parameters.AddWithValue("@dataPacIda", "");
-                cmd.Parameters.AddWithValue("@datapacVlt", "");
-                cmd.Parameters.AddWithValue("@descricaoPac", "");
-                cmd.Parameters.AddWithValue("@imagePac", "");*/
+                cmd.Parameters.AddWithValue("@valorPac",Pacote.ValorPac );
+                cmd.Parameters.AddWithValue("@origemPac", Pacote.OrigemPac);
+                cmd.Parameters.AddWithValue("@destinoPac", Pacote.DestinoPac);
+                cmd.Parameters.AddWithValue("@dataPacIda", Pacote.DataPacIda);
+                cmd.Parameters.AddWithValue("@datapacVlt", Pacote.DataPacVlt);
+                cmd.Parameters.AddWithValue("@descricaoPac", Pacote.DescricaoPac);
+                cmd.Parameters.AddWithValue("@imagePac", Pacote.ImagePac);
+
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codPac", SqlDbType.Int);
+                nv.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                var resposta = MessageBox.Show("Cadastro efetuado com Sucesso, deseja efetuar um novo registro?,",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resposta == DialogResult.Yes)
+                {
+                    Cliente.Retorno = "Sim";
+                    return;
+                }
+                else
+                {
+                    Cliente.Retorno = "Não";
+                    return;
+
+                }
             }
-    }
+            catch
+            {
+
+            }
+        }
+         }
     }
 

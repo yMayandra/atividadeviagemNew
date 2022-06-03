@@ -31,7 +31,7 @@ namespace atividadeviagem.View
 
         private void casatrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastraPacote pacote = new CadastraPacote();
+            dtpVlt pacote = new dtpVlt();
             pacote.Show();
         }
 

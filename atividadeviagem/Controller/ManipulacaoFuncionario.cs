@@ -20,20 +20,32 @@ namespace atividadeviagem.Controller
 
             try
             {
-                cmd.Parameters.AddWithValue("@nomeFun",Funcionario.NomeFun);
-                cmd.Parameters.AddWithValue("@emailFun",Funcionario.EmailFun);
-                cmd.Parameters.AddWithValue("@senhaFun",Funcionario.SenhaFun);
+                cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);
+                cmd.Parameters.AddWithValue("@emailFun", Funcionario.EmailFun);
+                cmd.Parameters.AddWithValue("@senhaFun", Funcionario.SenhaFun);
 
                 SqlParameter nv = cmd.Parameters.AddWithValue("@codFun", SqlDbType.Int);
                 nv.Direction = ParameterDirection.Output;
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                var resposta =MessageBox.Show("Cadastro Efetivado com Sucesso, deseja efetuar um novo reistro?","Atenção", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if(resposta == DialogResult.Yes)
+                var resposta = MessageBox.Show("Cadastro Efetivado com Sucesso, deseja efetuar um novo reistro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resposta == DialogResult.Yes)
                 {
-                 
+                    Funcionario.Retorno = "Sim";
+                    return;
                 }
+                else 
+                {
+                    Funcionario.Retorno = "Não";
+                        return;
+                }
+
             }
+            catch
+            {
+
+            }
+        }
     }
 }

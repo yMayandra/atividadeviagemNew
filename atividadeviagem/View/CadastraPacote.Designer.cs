@@ -1,7 +1,7 @@
 ﻿
 namespace atividadeviagem.View
 {
-    partial class CadastraPacote
+    partial class dtpVlt
     {
         /// <summary>
         /// Required designer variable.
@@ -35,17 +35,18 @@ namespace atividadeviagem.View
             this.lblDataIda = new System.Windows.Forms.Label();
             this.lblDataVlt = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.ptxImage = new System.Windows.Forms.PictureBox();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
             this.rtxDescricao = new System.Windows.Forms.RichTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dtpIda = new System.Windows.Forms.DateTimePicker();
+            this.dtpVolta = new System.Windows.Forms.DateTimePicker();
+            this.cbxDestino = new System.Windows.Forms.ComboBox();
+            this.cbxOrigem = new System.Windows.Forms.ComboBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).BeginInit();
+            this.tbxValor = new System.Windows.Forms.MaskedTextBox();
+            this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -109,14 +110,14 @@ namespace atividadeviagem.View
             this.lblDescricao.TabIndex = 6;
             this.lblDescricao.Text = "Descrição";
             // 
-            // ptxImage
+            // pbxImage
             // 
-            this.ptxImage.Location = new System.Drawing.Point(690, 142);
-            this.ptxImage.Margin = new System.Windows.Forms.Padding(4);
-            this.ptxImage.Name = "ptxImage";
-            this.ptxImage.Size = new System.Drawing.Size(210, 124);
-            this.ptxImage.TabIndex = 7;
-            this.ptxImage.TabStop = false;
+            this.pbxImage.Location = new System.Drawing.Point(690, 142);
+            this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(210, 124);
+            this.pbxImage.TabIndex = 7;
+            this.pbxImage.TabStop = false;
             // 
             // rtxDescricao
             // 
@@ -136,6 +137,7 @@ namespace atividadeviagem.View
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
@@ -146,38 +148,39 @@ namespace atividadeviagem.View
             this.btnPesquisar.TabIndex = 10;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // dateTimePicker2
+            // dtpIda
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(100, 240);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dtpIda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpIda.Location = new System.Drawing.Point(100, 240);
+            this.dtpIda.Name = "dtpIda";
+            this.dtpIda.Size = new System.Drawing.Size(200, 26);
+            this.dtpIda.TabIndex = 14;
             // 
-            // dateTimePicker3
+            // dtpVolta
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(100, 281);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker3.TabIndex = 15;
+            this.dtpVolta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVolta.Location = new System.Drawing.Point(100, 281);
+            this.dtpVolta.Name = "dtpVolta";
+            this.dtpVolta.Size = new System.Drawing.Size(200, 26);
+            this.dtpVolta.TabIndex = 15;
             // 
-            // comboBox1
+            // cbxDestino
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(100, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 27);
-            this.comboBox1.TabIndex = 16;
+            this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Location = new System.Drawing.Point(100, 134);
+            this.cbxDestino.Name = "cbxDestino";
+            this.cbxDestino.Size = new System.Drawing.Size(200, 27);
+            this.cbxDestino.TabIndex = 16;
             // 
-            // comboBox2
+            // cbxOrigem
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(100, 187);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 27);
-            this.comboBox2.TabIndex = 17;
+            this.cbxOrigem.FormattingEnabled = true;
+            this.cbxOrigem.Location = new System.Drawing.Point(100, 187);
+            this.cbxOrigem.Name = "cbxOrigem";
+            this.cbxOrigem.Size = new System.Drawing.Size(200, 27);
+            this.cbxOrigem.TabIndex = 17;
             // 
             // lblValor
             // 
@@ -188,28 +191,32 @@ namespace atividadeviagem.View
             this.lblValor.TabIndex = 18;
             this.lblValor.Text = "Valor";
             // 
-            // maskedTextBox1
+            // tbxValor
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(100, 327);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 26);
-            this.maskedTextBox1.TabIndex = 19;
+            this.tbxValor.Location = new System.Drawing.Point(100, 327);
+            this.tbxValor.Name = "tbxValor";
+            this.tbxValor.Size = new System.Drawing.Size(200, 26);
+            this.tbxValor.TabIndex = 19;
             // 
-            // CadastraPacote
+            // openFileDialogImage
+            // 
+            this.openFileDialogImage.FileName = "openFileDialog1";
+            // 
+            // dtpVlt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 570);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.tbxValor);
             this.Controls.Add(this.lblValor);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.cbxOrigem);
+            this.Controls.Add(this.cbxDestino);
+            this.Controls.Add(this.dtpVolta);
+            this.Controls.Add(this.dtpIda);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.rtxDescricao);
-            this.Controls.Add(this.ptxImage);
+            this.Controls.Add(this.pbxImage);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.lblDataVlt);
             this.Controls.Add(this.lblDataIda);
@@ -218,9 +225,9 @@ namespace atividadeviagem.View
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "CadastraPacote";
+            this.Name = "dtpVlt";
             this.Text = "CadastraPacote";
-            ((System.ComponentModel.ISupportInitialize)(this.ptxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,15 +241,16 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Label lblDataIda;
         private System.Windows.Forms.Label lblDataVlt;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.PictureBox ptxImage;
+        private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.RichTextBox rtxDescricao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DateTimePicker dtpIda;
+        private System.Windows.Forms.DateTimePicker dtpVolta;
+        private System.Windows.Forms.ComboBox cbxDestino;
+        private System.Windows.Forms.ComboBox cbxOrigem;
         private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbxValor;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImage;
     }
 }

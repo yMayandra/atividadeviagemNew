@@ -48,13 +48,23 @@ namespace atividadeviagem.View
                     manipulacaoCliente.cadastrarCliente();
                 }
             }
+            if (Cliente.Retorno == "Sim")
+            {
+                LimparTela();
+                return;
+            }
+            else if (Cliente.Retorno == "Não") 
+            {
+                FecharCadastro();
+                return;
+            }
 
-            LimparTela();
+            
         }
 
         private void btnImage_Click(object sender, EventArgs e)
         {
-            openFileDialogImage.Filter = "Escolha uma imagem (*.jpg*.png*.jpeg*)" + "|*.jpg*.png*.jpeg";
+            openFileDialogImage.Filter = "Escolha uma imagem (*.jpg;*.png;*.jpeg;)" + "|*.jpg;*.png;*.jpeg";
             if (openFileDialogImage.ShowDialog() == DialogResult.OK)
             {
                 pbxImage.Image = Image.FromFile(openFileDialogImage.FileName);
@@ -74,6 +84,11 @@ namespace atividadeviagem.View
                     pbxImage.Image = null;
                 }
             }
+        }
+
+        public void FecharCadastro() 
+        {
+            this.Close();
         }
     }
 }

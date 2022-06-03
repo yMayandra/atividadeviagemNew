@@ -98,6 +98,7 @@ namespace atividadeviagem.View
             // 
             this.tbxSenha.Location = new System.Drawing.Point(113, 208);
             this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(219, 23);
             this.tbxSenha.TabIndex = 4;
             // 
@@ -109,6 +110,7 @@ namespace atividadeviagem.View
             this.brnSalvar.TabIndex = 5;
             this.brnSalvar.Text = "Salvar";
             this.brnSalvar.UseVisualStyleBackColor = true;
+            this.brnSalvar.Click += new System.EventHandler(this.brnSalvar_Click);
             // 
             // CadastrarFuncionario
             // 
