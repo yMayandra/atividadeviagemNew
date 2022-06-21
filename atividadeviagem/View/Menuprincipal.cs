@@ -41,5 +41,17 @@ namespace atividadeviagem.View
             venda.Show();
                 
         }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarCliente telaPesquisarCliente = new TelaPesquisarCliente();
+            telaPesquisarCliente.ShowDialog();
+        }
+
+        private void visualizarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarFuncionario telaPesquisarFuncionario = new TelaPesquisarFuncionario();
+            telaPesquisarFuncionario.ShowDialog();
+        }
     }
 }

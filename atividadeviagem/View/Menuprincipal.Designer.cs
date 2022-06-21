@@ -93,6 +93,7 @@ namespace atividadeviagem.View
             this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
             this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
@@ -107,15 +108,16 @@ namespace atividadeviagem.View
             // cadasrtrarToolStripMenuItem
             // 
             this.cadasrtrarToolStripMenuItem.Name = "cadasrtrarToolStripMenuItem";
-            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.cadasrtrarToolStripMenuItem.Text = "Cadastrar ";
             this.cadasrtrarToolStripMenuItem.Click += new System.EventHandler(this.cadasrtrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem1
             // 
             this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.visualizarToolStripMenuItem1.Text = "Visualizar";
+            this.visualizarToolStripMenuItem1.Click += new System.EventHandler(this.visualizarToolStripMenuItem1_Click);
             // 
             // pacoteToolStripMenuItem
             // 
@@ -130,14 +132,14 @@ namespace atividadeviagem.View
             // casatrarToolStripMenuItem
             // 
             this.casatrarToolStripMenuItem.Name = "casatrarToolStripMenuItem";
-            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.casatrarToolStripMenuItem.Text = "Cadastrar";
             this.casatrarToolStripMenuItem.Click += new System.EventHandler(this.casatrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem2
             // 
             this.visualizarToolStripMenuItem2.Name = "visualizarToolStripMenuItem2";
-            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(139, 24);
             this.visualizarToolStripMenuItem2.Text = "Visualizar ";
             // 
             // vendaToolStripMenuItem
@@ -153,14 +155,14 @@ namespace atividadeviagem.View
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.registrarToolStripMenuItem.Text = "Registrar ";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // codigoDeVendaToolStripMenuItem
             // 
             this.codigoDeVendaToolStripMenuItem.Name = "codigoDeVendaToolStripMenuItem";
-            this.codigoDeVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.codigoDeVendaToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.codigoDeVendaToolStripMenuItem.Text = "Visualizar";
             // 
             // Menuprincipal

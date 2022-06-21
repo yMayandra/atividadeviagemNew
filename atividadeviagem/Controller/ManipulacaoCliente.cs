@@ -52,7 +52,7 @@ namespace atividadeviagem.Controller
         public void pesquisarCodCliente()
         {
             SqlConnection cn = new SqlConnection(Conexao.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarCliente", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaCliente", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
@@ -65,9 +65,9 @@ namespace atividadeviagem.Controller
                 {
                     Cliente.CodCli = Convert.ToInt32(arrayDados["codCli"]);
                     Cliente.NomeCli = arrayDados["nomeCli"].ToString();
-                    Cliente.EmailCli = arrayDados["nomeCli"].ToString();
+                    Cliente.EmailCli = arrayDados["EmailCli"].ToString();
                     Cliente.SenhaCli = arrayDados["senhaCli"].ToString();
-                    Cliente.ImageCli = (System.Array)arrayDados["imagemCli"];
+                    Cliente.ImageCli = (System.Array)arrayDados["imageCli"];
                     Cliente.Retorno = "Sim";
                 }
                 else
