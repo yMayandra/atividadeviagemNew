@@ -53,5 +53,11 @@ namespace atividadeviagem.View
             TelaPesquisarFuncionario telaPesquisarFuncionario = new TelaPesquisarFuncionario();
             telaPesquisarFuncionario.ShowDialog();
         }
+
+        private void visualizarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarPacote telaPesquisarPacote = new TelaPesquisarPacote();
+            telaPesquisarPacote.ShowDialog();
+        }
     }
 }

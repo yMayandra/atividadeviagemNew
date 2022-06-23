@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +19,7 @@ namespace atividadeviagem.View
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+ 
 
         private void btnbuscarCodPac_Click(object sender, EventArgs e)
         {
@@ -36,8 +32,45 @@ namespace atividadeviagem.View
                 cbxOrigem.Text = string.Empty;
                 cbxDestino.Text = string.Empty;
                 tbxValor.Text = string.Empty;
-
+                rtxDescricao.Text = string.Empty;
+                pbxImagePac.Image = null;
             }
+            else
+            {
+                Pacote.CodPac = Convert.ToInt32(tbxCodPac.Text);
+                ManipulacaoPacote manipulacaoPacote = new ManipulacaoPacote();
+                manipulacaoPacote.pesquisarCodPacote();
+
+                tbxValor.Text = Convert.ToString(Pacote.ValorPac);
+                cbxOrigem.Text = Pacote.DestinoPac;
+                rtxDescricao.Text = Pacote.DescricaoPac;
+
+                MemoryStream tt = new MemoryStream((byte[])Pacote.ImagePac);
+                pbxImagePac.Image = System.Drawing.Image.FromStream(tt);
+
+
+                if (Pacote.Retorno == "Não")
+                {
+                    tbxCodPac.Text = string.Empty;
+                    tbxCodPac.Focus();
+                    tbxCodPac.SelectAll();
+                    cbxOrigem.Text = string.Empty;
+                    cbxDestino.Text = string.Empty;
+                    tbxValor.Text = string.Empty;
+                    rtxDescricao.Text = string.Empty;
+                    pbxImagePac.Image = null;
+                }
+            }
+
+        }
+
+        private void btnBuscarNomePac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBucarImgPac_Click(object sender, EventArgs e)
+        {
 
         }
     }

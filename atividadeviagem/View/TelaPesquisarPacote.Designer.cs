@@ -32,10 +32,6 @@ namespace atividadeviagem.View
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnBuscarNomePac = new System.Windows.Forms.Button();
-            this.tbxNomePac = new System.Windows.Forms.TextBox();
-            this.lblNomePac = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +41,15 @@ namespace atividadeviagem.View
             this.DataVolta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbxCodPac = new System.Windows.Forms.TextBox();
-            this.lblCodPac = new System.Windows.Forms.Label();
-            this.btnbuscarCodPac = new System.Windows.Forms.Button();
+            this.btnBuscarNomePac = new System.Windows.Forms.Button();
+            this.tbxNomePac = new System.Windows.Forms.TextBox();
+            this.lblNomePac = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeletarPac = new System.Windows.Forms.Button();
+            this.btnAlterarPac = new System.Windows.Forms.Button();
+            this.btnBucarImgPac = new System.Windows.Forms.Button();
+            this.rtxDescricao = new System.Windows.Forms.RichTextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
             this.tbxValor = new System.Windows.Forms.MaskedTextBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.cbxOrigem = new System.Windows.Forms.ComboBox();
@@ -58,17 +60,15 @@ namespace atividadeviagem.View
             this.lblDataIda = new System.Windows.Forms.Label();
             this.lblOrigem = new System.Windows.Forms.Label();
             this.lblDestino = new System.Windows.Forms.Label();
-            this.rtxDescricao = new System.Windows.Forms.RichTextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.pbxImage = new System.Windows.Forms.PictureBox();
-            this.btnBucarImgPac = new System.Windows.Forms.Button();
-            this.btnDeletarPac = new System.Windows.Forms.Button();
-            this.btnAlterarPac = new System.Windows.Forms.Button();
+            this.tbxCodPac = new System.Windows.Forms.TextBox();
+            this.lblCodPac = new System.Windows.Forms.Label();
+            this.btnbuscarCodPac = new System.Windows.Forms.Button();
+            this.pbxImagePac = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagePac)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -105,61 +105,6 @@ namespace atividadeviagem.View
             this.tabPage1.Text = "Pesquisar Nome";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnDeletarPac);
-            this.tabPage2.Controls.Add(this.btnAlterarPac);
-            this.tabPage2.Controls.Add(this.btnBucarImgPac);
-            this.tabPage2.Controls.Add(this.pbxImage);
-            this.tabPage2.Controls.Add(this.rtxDescricao);
-            this.tabPage2.Controls.Add(this.lblDescricao);
-            this.tabPage2.Controls.Add(this.tbxValor);
-            this.tabPage2.Controls.Add(this.lblValor);
-            this.tabPage2.Controls.Add(this.cbxOrigem);
-            this.tabPage2.Controls.Add(this.cbxDestino);
-            this.tabPage2.Controls.Add(this.dtpVolta);
-            this.tabPage2.Controls.Add(this.dtpIda);
-            this.tabPage2.Controls.Add(this.lblDataVlt);
-            this.tabPage2.Controls.Add(this.lblDataIda);
-            this.tabPage2.Controls.Add(this.lblOrigem);
-            this.tabPage2.Controls.Add(this.lblDestino);
-            this.tabPage2.Controls.Add(this.tbxCodPac);
-            this.tabPage2.Controls.Add(this.lblCodPac);
-            this.tabPage2.Controls.Add(this.btnbuscarCodPac);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(812, 302);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pesquisar Codigo";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarNomePac
-            // 
-            this.btnBuscarNomePac.Location = new System.Drawing.Point(391, 25);
-            this.btnBuscarNomePac.Name = "btnBuscarNomePac";
-            this.btnBuscarNomePac.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarNomePac.TabIndex = 6;
-            this.btnBuscarNomePac.Text = "Buscar";
-            this.btnBuscarNomePac.UseVisualStyleBackColor = true;
-            // 
-            // tbxNomePac
-            // 
-            this.tbxNomePac.Location = new System.Drawing.Point(191, 25);
-            this.tbxNomePac.Name = "tbxNomePac";
-            this.tbxNomePac.Size = new System.Drawing.Size(185, 23);
-            this.tbxNomePac.TabIndex = 5;
-            // 
-            // lblNomePac
-            // 
-            this.lblNomePac.AutoSize = true;
-            this.lblNomePac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNomePac.Location = new System.Drawing.Point(6, 28);
-            this.lblNomePac.Name = "lblNomePac";
-            this.lblNomePac.Size = new System.Drawing.Size(158, 17);
-            this.lblNomePac.TabIndex = 4;
-            this.lblNomePac.Text = "Digite o nome do Pacote ";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -178,7 +123,6 @@ namespace atividadeviagem.View
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(794, 230);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Codigo
             // 
@@ -220,32 +164,108 @@ namespace atividadeviagem.View
             this.Image.HeaderText = "Image";
             this.Image.Name = "Image";
             // 
-            // tbxCodPac
+            // btnBuscarNomePac
             // 
-            this.tbxCodPac.Location = new System.Drawing.Point(191, 22);
-            this.tbxCodPac.Name = "tbxCodPac";
-            this.tbxCodPac.Size = new System.Drawing.Size(161, 23);
-            this.tbxCodPac.TabIndex = 22;
+            this.btnBuscarNomePac.Location = new System.Drawing.Point(391, 25);
+            this.btnBuscarNomePac.Name = "btnBuscarNomePac";
+            this.btnBuscarNomePac.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarNomePac.TabIndex = 6;
+            this.btnBuscarNomePac.Text = "Buscar";
+            this.btnBuscarNomePac.UseVisualStyleBackColor = true;
+            this.btnBuscarNomePac.Click += new System.EventHandler(this.btnBuscarNomePac_Click);
             // 
-            // lblCodPac
+            // tbxNomePac
             // 
-            this.lblCodPac.AutoSize = true;
-            this.lblCodPac.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCodPac.Location = new System.Drawing.Point(15, 25);
-            this.lblCodPac.Name = "lblCodPac";
-            this.lblCodPac.Size = new System.Drawing.Size(162, 17);
-            this.lblCodPac.TabIndex = 21;
-            this.lblCodPac.Text = "Digite o Codigo do Pacote";
+            this.tbxNomePac.Location = new System.Drawing.Point(191, 25);
+            this.tbxNomePac.Name = "tbxNomePac";
+            this.tbxNomePac.Size = new System.Drawing.Size(185, 23);
+            this.tbxNomePac.TabIndex = 5;
             // 
-            // btnbuscarCodPac
+            // lblNomePac
             // 
-            this.btnbuscarCodPac.Location = new System.Drawing.Point(374, 21);
-            this.btnbuscarCodPac.Name = "btnbuscarCodPac";
-            this.btnbuscarCodPac.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscarCodPac.TabIndex = 20;
-            this.btnbuscarCodPac.Text = "Buscar ";
-            this.btnbuscarCodPac.UseVisualStyleBackColor = true;
-            this.btnbuscarCodPac.Click += new System.EventHandler(this.btnbuscarCodPac_Click);
+            this.lblNomePac.AutoSize = true;
+            this.lblNomePac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomePac.Location = new System.Drawing.Point(6, 28);
+            this.lblNomePac.Name = "lblNomePac";
+            this.lblNomePac.Size = new System.Drawing.Size(158, 17);
+            this.lblNomePac.TabIndex = 4;
+            this.lblNomePac.Text = "Digite o nome do Pacote ";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.pbxImagePac);
+            this.tabPage2.Controls.Add(this.btnDeletarPac);
+            this.tabPage2.Controls.Add(this.btnAlterarPac);
+            this.tabPage2.Controls.Add(this.btnBucarImgPac);
+            this.tabPage2.Controls.Add(this.rtxDescricao);
+            this.tabPage2.Controls.Add(this.lblDescricao);
+            this.tabPage2.Controls.Add(this.tbxValor);
+            this.tabPage2.Controls.Add(this.lblValor);
+            this.tabPage2.Controls.Add(this.cbxOrigem);
+            this.tabPage2.Controls.Add(this.cbxDestino);
+            this.tabPage2.Controls.Add(this.dtpVolta);
+            this.tabPage2.Controls.Add(this.dtpIda);
+            this.tabPage2.Controls.Add(this.lblDataVlt);
+            this.tabPage2.Controls.Add(this.lblDataIda);
+            this.tabPage2.Controls.Add(this.lblOrigem);
+            this.tabPage2.Controls.Add(this.lblDestino);
+            this.tabPage2.Controls.Add(this.tbxCodPac);
+            this.tabPage2.Controls.Add(this.lblCodPac);
+            this.tabPage2.Controls.Add(this.btnbuscarCodPac);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(812, 302);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Pesquisar Codigo";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnDeletarPac
+            // 
+            this.btnDeletarPac.Location = new System.Drawing.Point(478, 258);
+            this.btnDeletarPac.Name = "btnDeletarPac";
+            this.btnDeletarPac.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletarPac.TabIndex = 38;
+            this.btnDeletarPac.Text = "Deletar";
+            this.btnDeletarPac.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarPac
+            // 
+            this.btnAlterarPac.Location = new System.Drawing.Point(388, 258);
+            this.btnAlterarPac.Name = "btnAlterarPac";
+            this.btnAlterarPac.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarPac.TabIndex = 37;
+            this.btnAlterarPac.Text = "Alterar";
+            this.btnAlterarPac.UseVisualStyleBackColor = true;
+            // 
+            // btnBucarImgPac
+            // 
+            this.btnBucarImgPac.Location = new System.Drawing.Point(659, 218);
+            this.btnBucarImgPac.Name = "btnBucarImgPac";
+            this.btnBucarImgPac.Size = new System.Drawing.Size(75, 23);
+            this.btnBucarImgPac.TabIndex = 36;
+            this.btnBucarImgPac.Text = "Pesquisar ";
+            this.btnBucarImgPac.UseVisualStyleBackColor = true;
+            this.btnBucarImgPac.Click += new System.EventHandler(this.btnBucarImgPac_Click);
+            // 
+            // rtxDescricao
+            // 
+            this.rtxDescricao.Location = new System.Drawing.Point(374, 68);
+            this.rtxDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.rtxDescricao.Name = "rtxDescricao";
+            this.rtxDescricao.Size = new System.Drawing.Size(189, 137);
+            this.rtxDescricao.TabIndex = 34;
+            this.rtxDescricao.Text = "";
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDescricao.Location = new System.Drawing.Point(301, 68);
+            this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(75, 19);
+            this.lblDescricao.TabIndex = 33;
+            this.lblDescricao.Text = "Descrição";
             // 
             // tbxValor
             // 
@@ -336,61 +356,40 @@ namespace atividadeviagem.View
             this.lblDestino.TabIndex = 23;
             this.lblDestino.Text = "Destino";
             // 
-            // rtxDescricao
+            // tbxCodPac
             // 
-            this.rtxDescricao.Location = new System.Drawing.Point(374, 68);
-            this.rtxDescricao.Margin = new System.Windows.Forms.Padding(4);
-            this.rtxDescricao.Name = "rtxDescricao";
-            this.rtxDescricao.Size = new System.Drawing.Size(189, 137);
-            this.rtxDescricao.TabIndex = 34;
-            this.rtxDescricao.Text = "";
+            this.tbxCodPac.Location = new System.Drawing.Point(191, 22);
+            this.tbxCodPac.Name = "tbxCodPac";
+            this.tbxCodPac.Size = new System.Drawing.Size(161, 23);
+            this.tbxCodPac.TabIndex = 22;
             // 
-            // lblDescricao
+            // lblCodPac
             // 
-            this.lblDescricao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDescricao.Location = new System.Drawing.Point(301, 68);
-            this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(75, 19);
-            this.lblDescricao.TabIndex = 33;
-            this.lblDescricao.Text = "Descrição";
+            this.lblCodPac.AutoSize = true;
+            this.lblCodPac.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCodPac.Location = new System.Drawing.Point(15, 25);
+            this.lblCodPac.Name = "lblCodPac";
+            this.lblCodPac.Size = new System.Drawing.Size(162, 17);
+            this.lblCodPac.TabIndex = 21;
+            this.lblCodPac.Text = "Digite o Codigo do Pacote";
             // 
-            // pbxImage
+            // btnbuscarCodPac
             // 
-            this.pbxImage.BackColor = System.Drawing.Color.Black;
-            this.pbxImage.Location = new System.Drawing.Point(585, 68);
-            this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
-            this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Size = new System.Drawing.Size(210, 137);
-            this.pbxImage.TabIndex = 35;
-            this.pbxImage.TabStop = false;
+            this.btnbuscarCodPac.Location = new System.Drawing.Point(374, 21);
+            this.btnbuscarCodPac.Name = "btnbuscarCodPac";
+            this.btnbuscarCodPac.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscarCodPac.TabIndex = 20;
+            this.btnbuscarCodPac.Text = "Buscar ";
+            this.btnbuscarCodPac.UseVisualStyleBackColor = true;
+            this.btnbuscarCodPac.Click += new System.EventHandler(this.btnbuscarCodPac_Click);
             // 
-            // btnBucarImgPac
+            // pbxImagePac
             // 
-            this.btnBucarImgPac.Location = new System.Drawing.Point(659, 218);
-            this.btnBucarImgPac.Name = "btnBucarImgPac";
-            this.btnBucarImgPac.Size = new System.Drawing.Size(75, 23);
-            this.btnBucarImgPac.TabIndex = 36;
-            this.btnBucarImgPac.Text = "Pesquisar ";
-            this.btnBucarImgPac.UseVisualStyleBackColor = true;
-            // 
-            // btnDeletarPac
-            // 
-            this.btnDeletarPac.Location = new System.Drawing.Point(478, 258);
-            this.btnDeletarPac.Name = "btnDeletarPac";
-            this.btnDeletarPac.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletarPac.TabIndex = 38;
-            this.btnDeletarPac.Text = "Deletar";
-            this.btnDeletarPac.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterarPac
-            // 
-            this.btnAlterarPac.Location = new System.Drawing.Point(388, 258);
-            this.btnAlterarPac.Name = "btnAlterarPac";
-            this.btnAlterarPac.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarPac.TabIndex = 37;
-            this.btnAlterarPac.Text = "Alterar";
-            this.btnAlterarPac.UseVisualStyleBackColor = true;
+            this.pbxImagePac.Location = new System.Drawing.Point(604, 65);
+            this.pbxImagePac.Name = "pbxImagePac";
+            this.pbxImagePac.Size = new System.Drawing.Size(127, 129);
+            this.pbxImagePac.TabIndex = 39;
+            this.pbxImagePac.TabStop = false;
             // 
             // TelaPesquisarPacote
             // 
@@ -404,10 +403,10 @@ namespace atividadeviagem.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagePac)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,9 +445,9 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Label lblDestino;
         private System.Windows.Forms.RichTextBox rtxDescricao;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.PictureBox pbxImage;
         private System.Windows.Forms.Button btnBucarImgPac;
         private System.Windows.Forms.Button btnDeletarPac;
         private System.Windows.Forms.Button btnAlterarPac;
+        private System.Windows.Forms.PictureBox pbxImagePac;
     }
 }

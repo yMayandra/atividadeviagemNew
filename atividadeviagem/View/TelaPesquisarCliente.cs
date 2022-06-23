@@ -45,6 +45,8 @@ namespace atividadeviagem.View
                 tbxSenha.Text = Cliente.SenhaCli;
                 MemoryStream ms = new MemoryStream((byte[])Cliente.ImageCli);
                 pbxImage.Image = Image.FromStream(ms);
+              
+                
 
                 if (Cliente.Retorno == "Não")
                 {
@@ -58,6 +60,11 @@ namespace atividadeviagem.View
                     return;
                 }
             }
+
+        }
+
+        private void btnBucarImgCli_Click(object sender, EventArgs e)
+        {
 
         }
     }

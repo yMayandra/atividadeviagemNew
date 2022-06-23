@@ -91,6 +91,11 @@ namespace atividadeviagem.View
         {
             this.Close();
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

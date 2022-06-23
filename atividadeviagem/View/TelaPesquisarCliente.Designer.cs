@@ -204,6 +204,7 @@ namespace atividadeviagem.View
             this.btnBucarImgCli.TabIndex = 17;
             this.btnBucarImgCli.Text = "Pesquisar ";
             this.btnBucarImgCli.UseVisualStyleBackColor = true;
+            this.btnBucarImgCli.Click += new System.EventHandler(this.btnBucarImgCli_Click);
             // 
             // btnDeletarCli
             // 

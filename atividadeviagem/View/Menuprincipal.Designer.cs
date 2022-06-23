@@ -108,14 +108,14 @@ namespace atividadeviagem.View
             // cadasrtrarToolStripMenuItem
             // 
             this.cadasrtrarToolStripMenuItem.Name = "cadasrtrarToolStripMenuItem";
-            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.cadasrtrarToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.cadasrtrarToolStripMenuItem.Text = "Cadastrar ";
             this.cadasrtrarToolStripMenuItem.Click += new System.EventHandler(this.cadasrtrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem1
             // 
             this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.visualizarToolStripMenuItem1.Text = "Visualizar";
             this.visualizarToolStripMenuItem1.Click += new System.EventHandler(this.visualizarToolStripMenuItem1_Click);
             // 
@@ -132,15 +132,16 @@ namespace atividadeviagem.View
             // casatrarToolStripMenuItem
             // 
             this.casatrarToolStripMenuItem.Name = "casatrarToolStripMenuItem";
-            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.casatrarToolStripMenuItem.Text = "Cadastrar";
             this.casatrarToolStripMenuItem.Click += new System.EventHandler(this.casatrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem2
             // 
             this.visualizarToolStripMenuItem2.Name = "visualizarToolStripMenuItem2";
-            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(139, 24);
+            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.visualizarToolStripMenuItem2.Text = "Visualizar ";
+            this.visualizarToolStripMenuItem2.Click += new System.EventHandler(this.visualizarToolStripMenuItem2_Click);
             // 
             // vendaToolStripMenuItem
             // 
