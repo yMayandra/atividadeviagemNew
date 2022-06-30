@@ -138,6 +138,7 @@ namespace atividadeviagem.View
             this.btnBuscarNomeCli.TabIndex = 3;
             this.btnBuscarNomeCli.Text = "Buscar";
             this.btnBuscarNomeCli.UseVisualStyleBackColor = true;
+            this.btnBuscarNomeCli.Click += new System.EventHandler(this.btnBuscarNomeCli_Click);
             // 
             // tbxNomeCli
             // 
@@ -214,6 +215,7 @@ namespace atividadeviagem.View
             this.btnDeletarCli.TabIndex = 16;
             this.btnDeletarCli.Text = "Deletar";
             this.btnDeletarCli.UseVisualStyleBackColor = true;
+            this.btnDeletarCli.Click += new System.EventHandler(this.btnDeletarCli_Click);
             // 
             // btnbuscarCodCli
             // 
@@ -233,6 +235,7 @@ namespace atividadeviagem.View
             this.btnAlterarCli.TabIndex = 14;
             this.btnAlterarCli.Text = "Alterar";
             this.btnAlterarCli.UseVisualStyleBackColor = true;
+            this.btnAlterarCli.Click += new System.EventHandler(this.btnAlterarCli_Click);
             // 
             // pbxImage
             // 

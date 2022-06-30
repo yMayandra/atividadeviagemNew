@@ -32,29 +32,29 @@ namespace atividadeviagem.View
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnBuscarNomeFun = new System.Windows.Forms.Button();
-            this.tbxNomeFun = new System.Windows.Forms.TextBox();
-            this.lblPesquisarNomeFun = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFun = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbxCodFun = new System.Windows.Forms.TextBox();
-            this.lblCodFun = new System.Windows.Forms.Label();
-            this.btnbuscarCodFun = new System.Windows.Forms.Button();
+            this.btnBuscarNomeFun = new System.Windows.Forms.Button();
+            this.tbxNomeFun = new System.Windows.Forms.TextBox();
+            this.lblPesquisarNomeFun = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeletarFun = new System.Windows.Forms.Button();
+            this.btnAlterarFun = new System.Windows.Forms.Button();
             this.tbxSenha = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.btnDeletarFun = new System.Windows.Forms.Button();
-            this.btnAlterarFun = new System.Windows.Forms.Button();
+            this.tbxCodFun = new System.Windows.Forms.TextBox();
+            this.lblCodFun = new System.Windows.Forms.Label();
+            this.btnbuscarCodFun = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFun)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -79,7 +79,7 @@ namespace atividadeviagem.View
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dataGridViewFun);
             this.tabPage1.Controls.Add(this.btnBuscarNomeFun);
             this.tabPage1.Controls.Add(this.tbxNomeFun);
             this.tabPage1.Controls.Add(this.lblPesquisarNomeFun);
@@ -90,6 +90,62 @@ namespace atividadeviagem.View
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pesquisar Nome";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewFun
+            // 
+            this.dataGridViewFun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Nome,
+            this.Senha});
+            this.dataGridViewFun.Location = new System.Drawing.Point(163, 71);
+            this.dataGridViewFun.Name = "dataGridViewFun";
+            this.dataGridViewFun.RowHeadersVisible = false;
+            this.dataGridViewFun.RowTemplate.Height = 25;
+            this.dataGridViewFun.Size = new System.Drawing.Size(303, 205);
+            this.dataGridViewFun.TabIndex = 7;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Senha
+            // 
+            this.Senha.HeaderText = "Senha";
+            this.Senha.Name = "Senha";
+            // 
+            // btnBuscarNomeFun
+            // 
+            this.btnBuscarNomeFun.Location = new System.Drawing.Point(469, 30);
+            this.btnBuscarNomeFun.Name = "btnBuscarNomeFun";
+            this.btnBuscarNomeFun.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarNomeFun.TabIndex = 6;
+            this.btnBuscarNomeFun.Text = "Buscar";
+            this.btnBuscarNomeFun.UseVisualStyleBackColor = true;
+            this.btnBuscarNomeFun.Click += new System.EventHandler(this.btnBuscarNomeFun_Click);
+            // 
+            // tbxNomeFun
+            // 
+            this.tbxNomeFun.Location = new System.Drawing.Point(260, 30);
+            this.tbxNomeFun.Name = "tbxNomeFun";
+            this.tbxNomeFun.Size = new System.Drawing.Size(194, 23);
+            this.tbxNomeFun.TabIndex = 5;
+            // 
+            // lblPesquisarNomeFun
+            // 
+            this.lblPesquisarNomeFun.AutoSize = true;
+            this.lblPesquisarNomeFun.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPesquisarNomeFun.Location = new System.Drawing.Point(77, 32);
+            this.lblPesquisarNomeFun.Name = "lblPesquisarNomeFun";
+            this.lblPesquisarNomeFun.Size = new System.Drawing.Size(186, 17);
+            this.lblPesquisarNomeFun.TabIndex = 4;
+            this.lblPesquisarNomeFun.Text = "Digite o nome do Funcionario ";
             // 
             // tabPage2
             // 
@@ -112,87 +168,25 @@ namespace atividadeviagem.View
             this.tabPage2.Text = "Pesquisar Codigo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarNomeFun
+            // btnDeletarFun
             // 
-            this.btnBuscarNomeFun.Location = new System.Drawing.Point(469, 30);
-            this.btnBuscarNomeFun.Name = "btnBuscarNomeFun";
-            this.btnBuscarNomeFun.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarNomeFun.TabIndex = 6;
-            this.btnBuscarNomeFun.Text = "Buscar";
-            this.btnBuscarNomeFun.UseVisualStyleBackColor = true;
+            this.btnDeletarFun.Location = new System.Drawing.Point(343, 266);
+            this.btnDeletarFun.Name = "btnDeletarFun";
+            this.btnDeletarFun.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletarFun.TabIndex = 30;
+            this.btnDeletarFun.Text = "Deletar";
+            this.btnDeletarFun.UseVisualStyleBackColor = true;
+            this.btnDeletarFun.Click += new System.EventHandler(this.btnDeletarFun_Click);
             // 
-            // tbxNomeFun
+            // btnAlterarFun
             // 
-            this.tbxNomeFun.Location = new System.Drawing.Point(260, 30);
-            this.tbxNomeFun.Name = "tbxNomeFun";
-            this.tbxNomeFun.Size = new System.Drawing.Size(194, 23);
-            this.tbxNomeFun.TabIndex = 5;
-            // 
-            // lblPesquisarNomeFun
-            // 
-            this.lblPesquisarNomeFun.AutoSize = true;
-            this.lblPesquisarNomeFun.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPesquisarNomeFun.Location = new System.Drawing.Point(77, 32);
-            this.lblPesquisarNomeFun.Name = "lblPesquisarNomeFun";
-            this.lblPesquisarNomeFun.Size = new System.Drawing.Size(186, 17);
-            this.lblPesquisarNomeFun.TabIndex = 4;
-            this.lblPesquisarNomeFun.Text = "Digite o nome do Funcionario ";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nome,
-            this.Senha});
-            this.dataGridView1.Location = new System.Drawing.Point(163, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 205);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Senha
-            // 
-            this.Senha.HeaderText = "Senha";
-            this.Senha.Name = "Senha";
-            // 
-            // tbxCodFun
-            // 
-            this.tbxCodFun.Location = new System.Drawing.Point(257, 35);
-            this.tbxCodFun.Name = "tbxCodFun";
-            this.tbxCodFun.Size = new System.Drawing.Size(161, 23);
-            this.tbxCodFun.TabIndex = 22;
-            // 
-            // lblCodFun
-            // 
-            this.lblCodFun.AutoSize = true;
-            this.lblCodFun.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCodFun.Location = new System.Drawing.Point(65, 38);
-            this.lblCodFun.Name = "lblCodFun";
-            this.lblCodFun.Size = new System.Drawing.Size(189, 17);
-            this.lblCodFun.TabIndex = 21;
-            this.lblCodFun.Text = "Digite o Codigo do Funcionario";
-            // 
-            // btnbuscarCodFun
-            // 
-            this.btnbuscarCodFun.Location = new System.Drawing.Point(427, 35);
-            this.btnbuscarCodFun.Name = "btnbuscarCodFun";
-            this.btnbuscarCodFun.Size = new System.Drawing.Size(75, 23);
-            this.btnbuscarCodFun.TabIndex = 20;
-            this.btnbuscarCodFun.Text = "Buscar ";
-            this.btnbuscarCodFun.UseVisualStyleBackColor = true;
-            this.btnbuscarCodFun.Click += new System.EventHandler(this.btnbuscarCodFun_Click);
+            this.btnAlterarFun.Location = new System.Drawing.Point(253, 266);
+            this.btnAlterarFun.Name = "btnAlterarFun";
+            this.btnAlterarFun.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarFun.TabIndex = 29;
+            this.btnAlterarFun.Text = "Alterar";
+            this.btnAlterarFun.UseVisualStyleBackColor = true;
+            this.btnAlterarFun.Click += new System.EventHandler(this.btnAlterarFun_Click);
             // 
             // tbxSenha
             // 
@@ -246,23 +240,32 @@ namespace atividadeviagem.View
             this.lblNome.TabIndex = 25;
             this.lblNome.Text = "Nome";
             // 
-            // btnDeletarFun
+            // tbxCodFun
             // 
-            this.btnDeletarFun.Location = new System.Drawing.Point(343, 266);
-            this.btnDeletarFun.Name = "btnDeletarFun";
-            this.btnDeletarFun.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletarFun.TabIndex = 30;
-            this.btnDeletarFun.Text = "Deletar";
-            this.btnDeletarFun.UseVisualStyleBackColor = true;
+            this.tbxCodFun.Location = new System.Drawing.Point(257, 35);
+            this.tbxCodFun.Name = "tbxCodFun";
+            this.tbxCodFun.Size = new System.Drawing.Size(161, 23);
+            this.tbxCodFun.TabIndex = 22;
             // 
-            // btnAlterarFun
+            // lblCodFun
             // 
-            this.btnAlterarFun.Location = new System.Drawing.Point(253, 266);
-            this.btnAlterarFun.Name = "btnAlterarFun";
-            this.btnAlterarFun.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarFun.TabIndex = 29;
-            this.btnAlterarFun.Text = "Alterar";
-            this.btnAlterarFun.UseVisualStyleBackColor = true;
+            this.lblCodFun.AutoSize = true;
+            this.lblCodFun.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCodFun.Location = new System.Drawing.Point(65, 38);
+            this.lblCodFun.Name = "lblCodFun";
+            this.lblCodFun.Size = new System.Drawing.Size(189, 17);
+            this.lblCodFun.TabIndex = 21;
+            this.lblCodFun.Text = "Digite o Codigo do Funcionario";
+            // 
+            // btnbuscarCodFun
+            // 
+            this.btnbuscarCodFun.Location = new System.Drawing.Point(427, 35);
+            this.btnbuscarCodFun.Name = "btnbuscarCodFun";
+            this.btnbuscarCodFun.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscarCodFun.TabIndex = 20;
+            this.btnbuscarCodFun.Text = "Buscar ";
+            this.btnbuscarCodFun.UseVisualStyleBackColor = true;
+            this.btnbuscarCodFun.Click += new System.EventHandler(this.btnbuscarCodFun_Click);
             // 
             // TelaPesquisarFuncionario
             // 
@@ -276,9 +279,9 @@ namespace atividadeviagem.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFun)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +296,7 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Button btnBuscarNomeFun;
         private System.Windows.Forms.TextBox tbxNomeFun;
         private System.Windows.Forms.Label lblPesquisarNomeFun;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewFun;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Senha;

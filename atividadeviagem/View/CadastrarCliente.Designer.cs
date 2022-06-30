@@ -41,16 +41,18 @@ namespace atividadeviagem.View
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnImage = new System.Windows.Forms.Button();
             this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(27, 56);
+            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(197, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(481, 76);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cadastro Cliente";
             // 
@@ -108,6 +110,7 @@ namespace atividadeviagem.View
             // 
             // pbxImage
             // 
+            this.pbxImage.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.pbxImage.Location = new System.Drawing.Point(330, 140);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(146, 119);
@@ -116,28 +119,43 @@ namespace atividadeviagem.View
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Location = new System.Drawing.Point(199, 281);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnImage
             // 
+            this.btnImage.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImage.Location = new System.Drawing.Point(401, 281);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(75, 23);
             this.btnImage.TabIndex = 9;
             this.btnImage.Text = "Pesquisar";
-            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.UseVisualStyleBackColor = false;
             this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(57, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(526, 381);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // CadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnImage);
             this.Controls.Add(this.btnSalvar);
@@ -149,11 +167,14 @@ namespace atividadeviagem.View
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CadastrarCliente";
             this.Text = "CadastrarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +193,6 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.OpenFileDialog openFileDialogImage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

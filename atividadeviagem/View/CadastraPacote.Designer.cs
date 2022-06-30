@@ -29,6 +29,7 @@ namespace atividadeviagem.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dtpVlt));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblDestino = new System.Windows.Forms.Label();
             this.lblOrigem = new System.Windows.Forms.Label();
@@ -52,13 +53,13 @@ namespace atividadeviagem.View
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(35, 70);
+            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(13, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(184, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(485, 76);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Casatrar Pacote";
+            this.lblTitulo.Text = "Cadastrar Pacote";
             // 
             // lblDestino
             // 
@@ -112,16 +113,19 @@ namespace atividadeviagem.View
             // 
             // pbxImage
             // 
-            this.pbxImage.Location = new System.Drawing.Point(690, 142);
+            this.pbxImage.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pbxImage.Location = new System.Drawing.Point(628, 137);
             this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
             this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Size = new System.Drawing.Size(210, 124);
+            this.pbxImage.Size = new System.Drawing.Size(189, 137);
             this.pbxImage.TabIndex = 7;
             this.pbxImage.TabStop = false;
             // 
             // rtxDescricao
             // 
-            this.rtxDescricao.Location = new System.Drawing.Point(397, 134);
+            this.rtxDescricao.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.rtxDescricao.ForeColor = System.Drawing.Color.White;
+            this.rtxDescricao.Location = new System.Drawing.Point(397, 137);
             this.rtxDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.rtxDescricao.Name = "rtxDescricao";
             this.rtxDescricao.Size = new System.Drawing.Size(189, 137);
@@ -130,24 +134,28 @@ namespace atividadeviagem.View
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Location = new System.Drawing.Point(490, 286);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(96, 29);
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(804, 291);
+            this.btnPesquisar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisar.Location = new System.Drawing.Point(721, 287);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(96, 29);
             this.btnPesquisar.TabIndex = 10;
             this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // dtpIda
@@ -169,14 +177,23 @@ namespace atividadeviagem.View
             // cbxDestino
             // 
             this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Items.AddRange(new object[] {
+            "Salvador ",
+            "",
+            "Bahia "});
             this.cbxDestino.Location = new System.Drawing.Point(100, 134);
             this.cbxDestino.Name = "cbxDestino";
             this.cbxDestino.Size = new System.Drawing.Size(200, 27);
             this.cbxDestino.TabIndex = 16;
+            this.cbxDestino.SelectedIndexChanged += new System.EventHandler(this.cbxDestino_SelectedIndexChanged);
             // 
             // cbxOrigem
             // 
             this.cbxOrigem.FormattingEnabled = true;
+            this.cbxOrigem.Items.AddRange(new object[] {
+            "Salvador ",
+            "",
+            "Bahia "});
             this.cbxOrigem.Location = new System.Drawing.Point(100, 187);
             this.cbxOrigem.Name = "cbxOrigem";
             this.cbxOrigem.Size = new System.Drawing.Size(200, 27);
@@ -206,6 +223,7 @@ namespace atividadeviagem.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1029, 570);
             this.Controls.Add(this.tbxValor);
             this.Controls.Add(this.lblValor);
@@ -224,6 +242,8 @@ namespace atividadeviagem.View
             this.Controls.Add(this.lblDestino);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dtpVlt";
             this.Text = "CadastraPacote";

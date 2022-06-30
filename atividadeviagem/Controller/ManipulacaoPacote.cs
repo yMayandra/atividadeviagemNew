@@ -38,12 +38,12 @@ namespace atividadeviagem.Controller
                     "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (resposta == DialogResult.Yes)
                 {
-                    Cliente.Retorno = "Sim";
+                    Pacote.Retorno = "Sim";
                     return;
                 }
                 else
                 {
-                    Cliente.Retorno = "Não";
+                    Pacote.Retorno = "Não";
                     return;
 
                 }
@@ -70,8 +70,6 @@ namespace atividadeviagem.Controller
                     Pacote.CodPac = Convert.ToInt32(arrayDados["codFun"]);
                     Pacote.OrigemPac = arrayDados["origemPac"].ToString();
                     Pacote.DestinoPac = arrayDados["destinoPac"].ToString();
-                   /* Pacote.DataPacIda = Convert.ToDateTime(arrayDados["dataPacIda"]);
-                    Pacote.DataPacVlt = Convert.ToDateTime(arrayDados["dataPacVlt"]);*/
                     Pacote.DescricaoPac = arrayDados["descricaoPac"].ToString();
                     Pacote.ImagePac = (System.Array)arrayDados["imagemPac"];
                     Pacote.Retorno = "Sim";

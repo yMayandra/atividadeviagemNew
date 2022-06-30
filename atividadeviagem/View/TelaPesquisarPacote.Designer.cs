@@ -32,7 +32,7 @@ namespace atividadeviagem.View
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPac = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +41,8 @@ namespace atividadeviagem.View
             this.DataVolta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarNomePac = new System.Windows.Forms.Button();
-            this.tbxNomePac = new System.Windows.Forms.TextBox();
-            this.lblNomePac = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pbxImagePac = new System.Windows.Forms.PictureBox();
             this.btnDeletarPac = new System.Windows.Forms.Button();
             this.btnAlterarPac = new System.Windows.Forms.Button();
             this.btnBucarImgPac = new System.Windows.Forms.Button();
@@ -63,10 +61,15 @@ namespace atividadeviagem.View
             this.tbxCodPac = new System.Windows.Forms.TextBox();
             this.lblCodPac = new System.Windows.Forms.Label();
             this.btnbuscarCodPac = new System.Windows.Forms.Button();
-            this.pbxImagePac = new System.Windows.Forms.PictureBox();
+            this.lblNomePac = new System.Windows.Forms.Label();
+            this.tbxOrigemPac = new System.Windows.Forms.TextBox();
+            this.btnBuscarNomePac = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbxdestinoPac = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagePac)).BeginInit();
             this.SuspendLayout();
@@ -93,9 +96,12 @@ namespace atividadeviagem.View
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.tbxdestinoPac);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.dataGridViewPac);
             this.tabPage1.Controls.Add(this.btnBuscarNomePac);
-            this.tabPage1.Controls.Add(this.tbxNomePac);
+            this.tabPage1.Controls.Add(this.tbxOrigemPac);
             this.tabPage1.Controls.Add(this.lblNomePac);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -105,10 +111,10 @@ namespace atividadeviagem.View
             this.tabPage1.Text = "Pesquisar Nome";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewPac
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewPac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPac.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Origem,
             this.Destino,
@@ -117,12 +123,12 @@ namespace atividadeviagem.View
             this.DataVolta,
             this.Valor,
             this.Image});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 230);
-            this.dataGridView1.TabIndex = 7;
+            this.dataGridViewPac.Location = new System.Drawing.Point(6, 57);
+            this.dataGridViewPac.Name = "dataGridViewPac";
+            this.dataGridViewPac.RowHeadersVisible = false;
+            this.dataGridViewPac.RowTemplate.Height = 25;
+            this.dataGridViewPac.Size = new System.Drawing.Size(755, 245);
+            this.dataGridViewPac.TabIndex = 7;
             // 
             // Codigo
             // 
@@ -164,33 +170,6 @@ namespace atividadeviagem.View
             this.Image.HeaderText = "Image";
             this.Image.Name = "Image";
             // 
-            // btnBuscarNomePac
-            // 
-            this.btnBuscarNomePac.Location = new System.Drawing.Point(391, 25);
-            this.btnBuscarNomePac.Name = "btnBuscarNomePac";
-            this.btnBuscarNomePac.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarNomePac.TabIndex = 6;
-            this.btnBuscarNomePac.Text = "Buscar";
-            this.btnBuscarNomePac.UseVisualStyleBackColor = true;
-            this.btnBuscarNomePac.Click += new System.EventHandler(this.btnBuscarNomePac_Click);
-            // 
-            // tbxNomePac
-            // 
-            this.tbxNomePac.Location = new System.Drawing.Point(191, 25);
-            this.tbxNomePac.Name = "tbxNomePac";
-            this.tbxNomePac.Size = new System.Drawing.Size(185, 23);
-            this.tbxNomePac.TabIndex = 5;
-            // 
-            // lblNomePac
-            // 
-            this.lblNomePac.AutoSize = true;
-            this.lblNomePac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNomePac.Location = new System.Drawing.Point(6, 28);
-            this.lblNomePac.Name = "lblNomePac";
-            this.lblNomePac.Size = new System.Drawing.Size(158, 17);
-            this.lblNomePac.TabIndex = 4;
-            this.lblNomePac.Text = "Digite o nome do Pacote ";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pbxImagePac);
@@ -220,6 +199,14 @@ namespace atividadeviagem.View
             this.tabPage2.Text = "Pesquisar Codigo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pbxImagePac
+            // 
+            this.pbxImagePac.Location = new System.Drawing.Point(604, 65);
+            this.pbxImagePac.Name = "pbxImagePac";
+            this.pbxImagePac.Size = new System.Drawing.Size(127, 129);
+            this.pbxImagePac.TabIndex = 39;
+            this.pbxImagePac.TabStop = false;
+            // 
             // btnDeletarPac
             // 
             this.btnDeletarPac.Location = new System.Drawing.Point(478, 258);
@@ -228,6 +215,7 @@ namespace atividadeviagem.View
             this.btnDeletarPac.TabIndex = 38;
             this.btnDeletarPac.Text = "Deletar";
             this.btnDeletarPac.UseVisualStyleBackColor = true;
+            this.btnDeletarPac.Click += new System.EventHandler(this.btnDeletarPac_Click);
             // 
             // btnAlterarPac
             // 
@@ -237,6 +225,7 @@ namespace atividadeviagem.View
             this.btnAlterarPac.TabIndex = 37;
             this.btnAlterarPac.Text = "Alterar";
             this.btnAlterarPac.UseVisualStyleBackColor = true;
+            this.btnAlterarPac.Click += new System.EventHandler(this.btnAlterarPac_Click);
             // 
             // btnBucarImgPac
             // 
@@ -383,19 +372,65 @@ namespace atividadeviagem.View
             this.btnbuscarCodPac.UseVisualStyleBackColor = true;
             this.btnbuscarCodPac.Click += new System.EventHandler(this.btnbuscarCodPac_Click);
             // 
-            // pbxImagePac
+            // lblNomePac
             // 
-            this.pbxImagePac.Location = new System.Drawing.Point(604, 65);
-            this.pbxImagePac.Name = "pbxImagePac";
-            this.pbxImagePac.Size = new System.Drawing.Size(127, 129);
-            this.pbxImagePac.TabIndex = 39;
-            this.pbxImagePac.TabStop = false;
+            this.lblNomePac.AutoSize = true;
+            this.lblNomePac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomePac.Location = new System.Drawing.Point(2, 18);
+            this.lblNomePac.Name = "lblNomePac";
+            this.lblNomePac.Size = new System.Drawing.Size(166, 17);
+            this.lblNomePac.TabIndex = 4;
+            this.lblNomePac.Text = "Digite a origem do Pacote ";
+            this.lblNomePac.Click += new System.EventHandler(this.lblNomePac_Click);
+            // 
+            // tbxOrigemPac
+            // 
+            this.tbxOrigemPac.Location = new System.Drawing.Point(166, 16);
+            this.tbxOrigemPac.Name = "tbxOrigemPac";
+            this.tbxOrigemPac.Size = new System.Drawing.Size(142, 23);
+            this.tbxOrigemPac.TabIndex = 5;
+            // 
+            // btnBuscarNomePac
+            // 
+            this.btnBuscarNomePac.Location = new System.Drawing.Point(334, 16);
+            this.btnBuscarNomePac.Name = "btnBuscarNomePac";
+            this.btnBuscarNomePac.Size = new System.Drawing.Size(58, 23);
+            this.btnBuscarNomePac.TabIndex = 6;
+            this.btnBuscarNomePac.Text = "Buscar";
+            this.btnBuscarNomePac.UseVisualStyleBackColor = true;
+            this.btnBuscarNomePac.Click += new System.EventHandler(this.btnBuscarNomePac_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(748, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(58, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tbxdestinoPac
+            // 
+            this.tbxdestinoPac.Location = new System.Drawing.Point(600, 16);
+            this.tbxdestinoPac.Name = "tbxdestinoPac";
+            this.tbxdestinoPac.Size = new System.Drawing.Size(142, 23);
+            this.tbxdestinoPac.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(437, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Digite o destino do Pacote ";
             // 
             // TelaPesquisarPacote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 450);
+            this.ClientSize = new System.Drawing.Size(860, 505);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "TelaPesquisarPacote";
@@ -403,7 +438,7 @@ namespace atividadeviagem.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagePac)).EndInit();
@@ -418,10 +453,7 @@ namespace atividadeviagem.View
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnBuscarNomePac;
-        private System.Windows.Forms.TextBox tbxNomePac;
-        private System.Windows.Forms.Label lblNomePac;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewPac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
@@ -449,5 +481,11 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Button btnDeletarPac;
         private System.Windows.Forms.Button btnAlterarPac;
         private System.Windows.Forms.PictureBox pbxImagePac;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbxdestinoPac;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBuscarNomePac;
+        private System.Windows.Forms.TextBox tbxOrigemPac;
+        private System.Windows.Forms.Label lblNomePac;
     }
 }

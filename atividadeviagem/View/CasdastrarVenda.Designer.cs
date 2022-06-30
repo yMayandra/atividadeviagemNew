@@ -29,6 +29,7 @@ namespace atividadeviagem.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CasdastrarVenda));
             this.lblCadastro = new System.Windows.Forms.Label();
             this.lblCodCli = new System.Windows.Forms.Label();
             this.lblCodFun = new System.Windows.Forms.Label();
@@ -44,25 +45,26 @@ namespace atividadeviagem.View
             // lblCadastro
             // 
             this.lblCadastro.AutoSize = true;
-            this.lblCadastro.Location = new System.Drawing.Point(58, 32);
+            this.lblCadastro.Font = new System.Drawing.Font("Times New Roman", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCadastro.Location = new System.Drawing.Point(12, 9);
             this.lblCadastro.Name = "lblCadastro";
-            this.lblCadastro.Size = new System.Drawing.Size(38, 15);
+            this.lblCadastro.Size = new System.Drawing.Size(474, 76);
             this.lblCadastro.TabIndex = 0;
-            this.lblCadastro.Text = "label1";
+            this.lblCadastro.Text = "Cadastrar Venda";
             // 
             // lblCodCli
             // 
             this.lblCodCli.AutoSize = true;
-            this.lblCodCli.Location = new System.Drawing.Point(58, 83);
+            this.lblCodCli.Location = new System.Drawing.Point(40, 112);
             this.lblCodCli.Name = "lblCodCli";
             this.lblCodCli.Size = new System.Drawing.Size(86, 15);
             this.lblCodCli.TabIndex = 1;
-            this.lblCodCli.Text = "Codigo Cliente";
+            this.lblCodCli.Text = "Código Cliente";
             // 
             // lblCodFun
             // 
             this.lblCodFun.AutoSize = true;
-            this.lblCodFun.Location = new System.Drawing.Point(197, 83);
+            this.lblCodFun.Location = new System.Drawing.Point(33, 200);
             this.lblCodFun.Name = "lblCodFun";
             this.lblCodFun.Size = new System.Drawing.Size(112, 15);
             this.lblCodFun.TabIndex = 2;
@@ -71,7 +73,7 @@ namespace atividadeviagem.View
             // lblCodPac
             // 
             this.lblCodPac.AutoSize = true;
-            this.lblCodPac.Location = new System.Drawing.Point(346, 83);
+            this.lblCodPac.Location = new System.Drawing.Point(45, 275);
             this.lblCodPac.Name = "lblCodPac";
             this.lblCodPac.Size = new System.Drawing.Size(85, 15);
             this.lblCodPac.TabIndex = 3;
@@ -80,7 +82,7 @@ namespace atividadeviagem.View
             // lblPago
             // 
             this.lblPago.AutoSize = true;
-            this.lblPago.Location = new System.Drawing.Point(475, 83);
+            this.lblPago.Location = new System.Drawing.Point(45, 355);
             this.lblPago.Name = "lblPago";
             this.lblPago.Size = new System.Drawing.Size(81, 15);
             this.lblPago.TabIndex = 4;
@@ -88,35 +90,35 @@ namespace atividadeviagem.View
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 111);
+            this.textBox1.Location = new System.Drawing.Point(115, 151);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(60, 23);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(220, 111);
+            this.textBox2.Location = new System.Drawing.Point(56, 228);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(60, 23);
             this.textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(357, 111);
+            this.textBox3.Location = new System.Drawing.Point(56, 303);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(60, 23);
             this.textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(486, 111);
+            this.textBox4.Location = new System.Drawing.Point(56, 383);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(60, 23);
             this.textBox4.TabIndex = 8;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(58, 177);
+            this.btnSalvar.Location = new System.Drawing.Point(448, 369);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 9;
@@ -127,6 +129,7 @@ namespace atividadeviagem.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.textBox4);
@@ -138,6 +141,8 @@ namespace atividadeviagem.View
             this.Controls.Add(this.lblCodFun);
             this.Controls.Add(this.lblCodCli);
             this.Controls.Add(this.lblCadastro);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CasdastrarVenda";
             this.Text = "CasdastrarVenda";
             this.ResumeLayout(false);

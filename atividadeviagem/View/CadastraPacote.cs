@@ -32,7 +32,7 @@ namespace atividadeviagem.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (cbxDestino.Text == "" | cbxOrigem.Text == "" | dtpIda.Value > dtpVolta.Value |tbxValor.Text==""|rtxDescricao==null |pbxImage.Image == null)
+            if (cbxDestino.Text == "" | cbxOrigem.Text == "" | dtpIda.Value > dtpVolta.Value |tbxValor.Text==""|rtxDescricao.Text =="" |pbxImage.Image == null)
             {
                 MessageBox.Show("Preencha todos os campos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -41,9 +41,10 @@ namespace atividadeviagem.View
                 Pacote.ValorPac = Convert.ToDouble(tbxValor.Text);
                 Pacote.OrigemPac = cbxOrigem.Text;
                 Pacote.DestinoPac = cbxDestino.Text;
-                Pacote.DataPacIda = dtpIda.Text;
-                Pacote.DataPacVlt = dtpVolta.Text;
+                Pacote.DataPacIda = dtpIda.Value;
+                Pacote.DataPacVlt = dtpVolta.Value;
                 Pacote.DescricaoPac = rtxDescricao.Text;
+                  
                 
                
                 if (pbxImage.Image != null)
@@ -93,6 +94,11 @@ namespace atividadeviagem.View
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxDestino_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

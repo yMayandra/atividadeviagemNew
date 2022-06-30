@@ -59,5 +59,10 @@ namespace atividadeviagem.View
             TelaPesquisarPacote telaPesquisarPacote = new TelaPesquisarPacote();
             telaPesquisarPacote.ShowDialog();
         }
+
+        private void Menuprincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

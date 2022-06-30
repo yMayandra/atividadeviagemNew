@@ -49,7 +49,7 @@ namespace atividadeviagem.View
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
@@ -65,7 +65,7 @@ namespace atividadeviagem.View
             // 
             // arquivoToolStripMenuItem
             // 
-            this.arquivoToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.arquivoToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.arquivoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
@@ -73,10 +73,11 @@ namespace atividadeviagem.View
             // 
             // clienteToolStripMenuItem
             // 
-            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
             this.visualizarToolStripMenuItem});
+            this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.clienteToolStripMenuItem.Text = "Cliente";
@@ -97,10 +98,11 @@ namespace atividadeviagem.View
             // 
             // funcionarioToolStripMenuItem
             // 
-            this.funcionarioToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.funcionarioToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.funcionarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadasrtrarToolStripMenuItem,
             this.visualizarToolStripMenuItem1});
+            this.funcionarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(92, 23);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
@@ -121,10 +123,11 @@ namespace atividadeviagem.View
             // 
             // pacoteToolStripMenuItem
             // 
-            this.pacoteToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.pacoteToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.pacoteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.casatrarToolStripMenuItem,
             this.visualizarToolStripMenuItem2});
+            this.pacoteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pacoteToolStripMenuItem.Name = "pacoteToolStripMenuItem";
             this.pacoteToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.pacoteToolStripMenuItem.Text = "Pacote";
@@ -132,23 +135,24 @@ namespace atividadeviagem.View
             // casatrarToolStripMenuItem
             // 
             this.casatrarToolStripMenuItem.Name = "casatrarToolStripMenuItem";
-            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.casatrarToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.casatrarToolStripMenuItem.Text = "Cadastrar";
             this.casatrarToolStripMenuItem.Click += new System.EventHandler(this.casatrarToolStripMenuItem_Click);
             // 
             // visualizarToolStripMenuItem2
             // 
             this.visualizarToolStripMenuItem2.Name = "visualizarToolStripMenuItem2";
-            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.visualizarToolStripMenuItem2.Size = new System.Drawing.Size(139, 24);
             this.visualizarToolStripMenuItem2.Text = "Visualizar ";
             this.visualizarToolStripMenuItem2.Click += new System.EventHandler(this.visualizarToolStripMenuItem2_Click);
             // 
             // vendaToolStripMenuItem
             // 
-            this.vendaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.vendaToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
             this.codigoDeVendaToolStripMenuItem});
+            this.vendaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             this.vendaToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.vendaToolStripMenuItem.Text = "Venda ";
@@ -168,8 +172,9 @@ namespace atividadeviagem.View
             // 
             // Menuprincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -177,6 +182,7 @@ namespace atividadeviagem.View
             this.MaximizeBox = false;
             this.Name = "Menuprincipal";
             this.Text = "Sistema Gerenciador de Viagens ";
+            this.Load += new System.EventHandler(this.Menuprincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
