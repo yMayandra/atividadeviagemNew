@@ -39,9 +39,9 @@ namespace atividadeviagem.View
                 Funcionario.CodFun = Convert.ToInt32(tbxCodFun.Text);
                 ManipulacaoFuncionario manipulacaoFuncionario = new ManipulacaoFuncionario();
                 manipulacaoFuncionario.pesquisarCodFuncionario();
-                tbxNome.Text = Cliente.NomeCli;
-                tbxEmail.Text = Cliente.EmailCli;
-                tbxSenha.Text = Cliente.SenhaCli;
+                tbxNome.Text = Funcionario.NomeFun;
+                tbxEmail.Text = Funcionario.EmailFun;
+                tbxSenha.Text = Funcionario.SenhaFun;
 
             }
         }
@@ -121,17 +121,15 @@ namespace atividadeviagem.View
             Funcionario.NomeFun= tbxNomeFun.Text;
             dataGridViewFun.DataSource = ManipulacaoFuncionario.pesquisarNomeFuncionario();
 
-            dataGridViewFun.Columns[5].HeaderCell.Value = "Código";
 
             dataGridViewFun.Columns[0].Visible = false;
             dataGridViewFun.Columns[1].Visible = false;
             dataGridViewFun.Columns[2].Visible = false;
-            dataGridViewFun.Columns[3].Visible = false;
-            dataGridViewFun.Columns[4].Visible = false;
-            dataGridViewFun.Columns[5].Visible = false;
+            dataGridViewFun.Columns[3].HeaderCell.Value = "Código";
+            dataGridViewFun.Columns[4].HeaderCell.Value = "Nome";
+            dataGridViewFun.Columns[5].HeaderCell.Value = "E-mail";
             dataGridViewFun.Columns[6].Visible = false;
-            dataGridViewFun.Columns[7].Visible = false;
-            dataGridViewFun.Columns[8].Visible = false;
+ 
             /* dataGridViewFun.Columns[8].HeaderCell.Value = "Foto";*/
         }
     }

@@ -29,6 +29,7 @@ namespace atividadeviagem.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarFuncionario));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -79,20 +80,22 @@ namespace atividadeviagem.View
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.tabPage1.Controls.Add(this.dataGridViewFun);
             this.tabPage1.Controls.Add(this.btnBuscarNomeFun);
             this.tabPage1.Controls.Add(this.tbxNomeFun);
             this.tabPage1.Controls.Add(this.lblPesquisarNomeFun);
+            this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(665, 322);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pesquisar Nome";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridViewFun
             // 
+            this.dataGridViewFun.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dataGridViewFun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -122,12 +125,15 @@ namespace atividadeviagem.View
             // 
             // btnBuscarNomeFun
             // 
+            this.btnBuscarNomeFun.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnBuscarNomeFun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarNomeFun.ForeColor = System.Drawing.Color.White;
             this.btnBuscarNomeFun.Location = new System.Drawing.Point(469, 30);
             this.btnBuscarNomeFun.Name = "btnBuscarNomeFun";
             this.btnBuscarNomeFun.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarNomeFun.TabIndex = 6;
             this.btnBuscarNomeFun.Text = "Buscar";
-            this.btnBuscarNomeFun.UseVisualStyleBackColor = true;
+            this.btnBuscarNomeFun.UseVisualStyleBackColor = false;
             this.btnBuscarNomeFun.Click += new System.EventHandler(this.btnBuscarNomeFun_Click);
             // 
             // tbxNomeFun
@@ -140,15 +146,17 @@ namespace atividadeviagem.View
             // lblPesquisarNomeFun
             // 
             this.lblPesquisarNomeFun.AutoSize = true;
-            this.lblPesquisarNomeFun.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPesquisarNomeFun.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPesquisarNomeFun.ForeColor = System.Drawing.Color.White;
             this.lblPesquisarNomeFun.Location = new System.Drawing.Point(77, 32);
             this.lblPesquisarNomeFun.Name = "lblPesquisarNomeFun";
-            this.lblPesquisarNomeFun.Size = new System.Drawing.Size(186, 17);
+            this.lblPesquisarNomeFun.Size = new System.Drawing.Size(168, 15);
             this.lblPesquisarNomeFun.TabIndex = 4;
             this.lblPesquisarNomeFun.Text = "Digite o nome do Funcionario ";
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.tabPage2.Controls.Add(this.btnDeletarFun);
             this.tabPage2.Controls.Add(this.btnAlterarFun);
             this.tabPage2.Controls.Add(this.tbxSenha);
@@ -166,26 +174,29 @@ namespace atividadeviagem.View
             this.tabPage2.Size = new System.Drawing.Size(665, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar Codigo";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnDeletarFun
             // 
+            this.btnDeletarFun.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDeletarFun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletarFun.Location = new System.Drawing.Point(343, 266);
             this.btnDeletarFun.Name = "btnDeletarFun";
             this.btnDeletarFun.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarFun.TabIndex = 30;
             this.btnDeletarFun.Text = "Deletar";
-            this.btnDeletarFun.UseVisualStyleBackColor = true;
+            this.btnDeletarFun.UseVisualStyleBackColor = false;
             this.btnDeletarFun.Click += new System.EventHandler(this.btnDeletarFun_Click);
             // 
             // btnAlterarFun
             // 
+            this.btnAlterarFun.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnAlterarFun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarFun.Location = new System.Drawing.Point(253, 266);
             this.btnAlterarFun.Name = "btnAlterarFun";
             this.btnAlterarFun.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarFun.TabIndex = 29;
             this.btnAlterarFun.Text = "Alterar";
-            this.btnAlterarFun.UseVisualStyleBackColor = true;
+            this.btnAlterarFun.UseVisualStyleBackColor = false;
             this.btnAlterarFun.Click += new System.EventHandler(this.btnAlterarFun_Click);
             // 
             // tbxSenha
@@ -259,21 +270,25 @@ namespace atividadeviagem.View
             // 
             // btnbuscarCodFun
             // 
+            this.btnbuscarCodFun.BackColor = System.Drawing.Color.SkyBlue;
             this.btnbuscarCodFun.Location = new System.Drawing.Point(427, 35);
             this.btnbuscarCodFun.Name = "btnbuscarCodFun";
             this.btnbuscarCodFun.Size = new System.Drawing.Size(75, 23);
             this.btnbuscarCodFun.TabIndex = 20;
             this.btnbuscarCodFun.Text = "Buscar ";
-            this.btnbuscarCodFun.UseVisualStyleBackColor = true;
+            this.btnbuscarCodFun.UseVisualStyleBackColor = false;
             this.btnbuscarCodFun.Click += new System.EventHandler(this.btnbuscarCodFun_Click);
             // 
             // TelaPesquisarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitulo);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaPesquisarFuncionario";
             this.Text = "TelaPesquisarFuncionario";
             this.tabControl1.ResumeLayout(false);

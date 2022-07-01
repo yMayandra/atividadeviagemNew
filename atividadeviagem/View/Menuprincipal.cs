@@ -37,7 +37,7 @@ namespace atividadeviagem.View
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CasdastrarVenda venda = new CasdastrarVenda();
+            CadastrarVenda venda = new CadastrarVenda();
             venda.Show();
                 
         }

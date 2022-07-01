@@ -43,6 +43,7 @@ namespace atividadeviagem.View
                 tbxNome.Text = Cliente.NomeCli;
                 tbxEmail.Text = Cliente.EmailCli;
                 tbxSenha.Text = Cliente.SenhaCli;
+
                 MemoryStream ms = new MemoryStream((byte[])Cliente.ImageCli);
                 pbxImage.Image = Image.FromStream(ms);
               
@@ -149,18 +150,16 @@ namespace atividadeviagem.View
             Cliente.NomeCli = tbxNomeCli.Text;
             dataGridViewCliente.DataSource = ManipulacaoCliente.pesquisarNomeCliente();
 
-            dataGridViewCliente.Columns[5].HeaderCell.Value = "Código";
-
             dataGridViewCliente.Columns[0].Visible = false;
             dataGridViewCliente.Columns[1].Visible = false;
             dataGridViewCliente.Columns[2].Visible = false;
             dataGridViewCliente.Columns[3].Visible = false;
-            dataGridViewCliente.Columns[4].Visible = false;
-            dataGridViewCliente.Columns[5].Visible = false;
-            dataGridViewCliente.Columns[6].Visible = false;
+            dataGridViewCliente.Columns[4].HeaderCell.Value="Código";
+            dataGridViewCliente.Columns[5].HeaderCell.Value = "Nome";
+            dataGridViewCliente.Columns[6].HeaderCell.Value = "E-mail";
             dataGridViewCliente.Columns[7].Visible = false;
-            dataGridViewCliente.Columns[8].Visible = false;
-            /*dataGridViewCliente.Columns[8].HeaderCell.Value = "Foto";*/
+            dataGridViewCliente.Columns[8].HeaderCell.Value = "Image";
+      
 
         }
     }

@@ -25,7 +25,7 @@ namespace atividadeviagem.Controller
                 cmd.Parameters.AddWithValue("@origemPac", Pacote.OrigemPac);
                 cmd.Parameters.AddWithValue("@destinoPac", Pacote.DestinoPac);
                 cmd.Parameters.AddWithValue("@dataPacIda", Pacote.DataPacIda);
-                cmd.Parameters.AddWithValue("@datapacVlt", Pacote.DataPacVlt);
+                cmd.Parameters.AddWithValue("@dataPacVlt", Pacote.DataPacVlt);
                 cmd.Parameters.AddWithValue("@descricaoPac", Pacote.DescricaoPac);
                 cmd.Parameters.AddWithValue("@imagePac", Pacote.ImagePac);
 
@@ -56,7 +56,7 @@ namespace atividadeviagem.Controller
         public void pesquisarCodPacote()
         {
             SqlConnection cn = new SqlConnection(Conexao.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarPacote", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
@@ -67,11 +67,12 @@ namespace atividadeviagem.Controller
                 var arrayDados = cmd.ExecuteReader();
                 if (arrayDados.Read())
                 {
-                    Pacote.CodPac = Convert.ToInt32(arrayDados["codFun"]);
+                    Pacote.CodPac = Convert.ToInt32(arrayDados["codPac"]);
                     Pacote.OrigemPac = arrayDados["origemPac"].ToString();
                     Pacote.DestinoPac = arrayDados["destinoPac"].ToString();
                     Pacote.DescricaoPac = arrayDados["descricaoPac"].ToString();
-                    Pacote.ImagePac = (System.Array)arrayDados["imagemPac"];
+                    Pacote.ImagePac = (System.Array)arrayDados["imagePac"];
+                    Pacote.ValorPac = Convert.ToInt32(arrayDados[" valorPac"]);
                     Pacote.Retorno = "Sim";
                 }
                 else
@@ -148,13 +149,13 @@ namespace atividadeviagem.Controller
 
         }
 
-        public static BindingSource pesquisarNomePacote()
+        public static BindingSource pesquisarOrigemPacote()
         {
             SqlConnection cn = new SqlConnection(Conexao.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarNomePacote", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisarOrigemPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@codFun", Pacote.CodPac);
+            cmd.Parameters.AddWithValue("@origemPac", Pacote.CodPac);
             cn.Open();
             cmd.ExecuteNonQuery();
 

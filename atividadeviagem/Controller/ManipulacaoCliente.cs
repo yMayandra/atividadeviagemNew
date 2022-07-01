@@ -65,7 +65,7 @@ namespace atividadeviagem.Controller
                 {
                     Cliente.CodCli = Convert.ToInt32(arrayDados["codCli"]);
                     Cliente.NomeCli = arrayDados["nomeCli"].ToString();
-                    Cliente.EmailCli = arrayDados["EmailCli"].ToString();
+                    Cliente.EmailCli = arrayDados["emailCli"].ToString();
                     Cliente.SenhaCli = arrayDados["senhaCli"].ToString();
                     Cliente.ImageCli = (System.Array)arrayDados["imageCli"];
                     Cliente.Retorno = "Sim";
@@ -144,7 +144,7 @@ namespace atividadeviagem.Controller
         public static BindingSource pesquisarNomeCliente()
         {
             SqlConnection cn = new SqlConnection(Conexao.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarNomeCliente", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaNomeCliente", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@nomeCli", Cliente.NomeCli);

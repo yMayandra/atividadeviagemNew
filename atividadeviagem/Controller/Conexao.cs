@@ -10,7 +10,7 @@ namespace atividadeviagem.Controller
     {
        public static string conectar()
         {
-            return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mayandra.vmota\Desktop\atividadeviagem-master\atividadeviagem\BancodeDados\bdAgenciaViajens.mdf;Integrated Security=True";
+            return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mayandra.vmota\source\repos\atividadeviagemNew\atividadeviagem\bdAgenciaViajens.mdf;Integrated Security=True";
         }
     }
 }

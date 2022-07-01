@@ -64,7 +64,7 @@ namespace atividadeviagem.Controller
                 {
                     Funcionario.CodFun = Convert.ToInt32(arrayDados["codFun"]);
                     Funcionario.NomeFun= arrayDados["nomeFun"].ToString();
-                    Funcionario.EmailFun = arrayDados["nomeFun"].ToString();
+                    Funcionario.EmailFun = arrayDados["emailFun"].ToString();
                     Funcionario.SenhaFun = arrayDados["senhaFun"].ToString();
                     Funcionario.Retorno = "Sim";
                 }
@@ -141,7 +141,7 @@ namespace atividadeviagem.Controller
         public static BindingSource pesquisarNomeFuncionario()
         {
             SqlConnection cn = new SqlConnection(Conexao.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarNomeFuncionaro", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisarNomeFuncionario", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);

@@ -42,11 +42,11 @@ namespace atividadeviagem.View
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dtpIda = new System.Windows.Forms.DateTimePicker();
             this.dtpVolta = new System.Windows.Forms.DateTimePicker();
-            this.cbxDestino = new System.Windows.Forms.ComboBox();
-            this.cbxOrigem = new System.Windows.Forms.ComboBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.tbxValor = new System.Windows.Forms.MaskedTextBox();
             this.openFileDialogImage = new System.Windows.Forms.OpenFileDialog();
+            this.cbxDestino = new System.Windows.Forms.ComboBox();
+            this.cbxOrigem = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,31 +174,6 @@ namespace atividadeviagem.View
             this.dtpVolta.Size = new System.Drawing.Size(200, 26);
             this.dtpVolta.TabIndex = 15;
             // 
-            // cbxDestino
-            // 
-            this.cbxDestino.FormattingEnabled = true;
-            this.cbxDestino.Items.AddRange(new object[] {
-            "Salvador ",
-            "",
-            "Bahia "});
-            this.cbxDestino.Location = new System.Drawing.Point(100, 134);
-            this.cbxDestino.Name = "cbxDestino";
-            this.cbxDestino.Size = new System.Drawing.Size(200, 27);
-            this.cbxDestino.TabIndex = 16;
-            this.cbxDestino.SelectedIndexChanged += new System.EventHandler(this.cbxDestino_SelectedIndexChanged);
-            // 
-            // cbxOrigem
-            // 
-            this.cbxOrigem.FormattingEnabled = true;
-            this.cbxOrigem.Items.AddRange(new object[] {
-            "Salvador ",
-            "",
-            "Bahia "});
-            this.cbxOrigem.Location = new System.Drawing.Point(100, 187);
-            this.cbxOrigem.Name = "cbxOrigem";
-            this.cbxOrigem.Size = new System.Drawing.Size(200, 27);
-            this.cbxOrigem.TabIndex = 17;
-            // 
             // lblValor
             // 
             this.lblValor.AutoSize = true;
@@ -219,16 +194,88 @@ namespace atividadeviagem.View
             // 
             this.openFileDialogImage.FileName = "openFileDialog1";
             // 
+            // cbxDestino
+            // 
+            this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
+            this.cbxDestino.Location = new System.Drawing.Point(100, 137);
+            this.cbxDestino.Name = "cbxDestino";
+            this.cbxDestino.Size = new System.Drawing.Size(200, 27);
+            this.cbxDestino.TabIndex = 20;
+            // 
+            // cbxOrigem
+            // 
+            this.cbxOrigem.FormattingEnabled = true;
+            this.cbxOrigem.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
+            this.cbxOrigem.Location = new System.Drawing.Point(100, 187);
+            this.cbxOrigem.Name = "cbxOrigem";
+            this.cbxOrigem.Size = new System.Drawing.Size(200, 27);
+            this.cbxOrigem.TabIndex = 21;
+            // 
             // dtpVlt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(1029, 570);
-            this.Controls.Add(this.tbxValor);
-            this.Controls.Add(this.lblValor);
             this.Controls.Add(this.cbxOrigem);
             this.Controls.Add(this.cbxDestino);
+            this.Controls.Add(this.tbxValor);
+            this.Controls.Add(this.lblValor);
             this.Controls.Add(this.dtpVolta);
             this.Controls.Add(this.dtpIda);
             this.Controls.Add(this.btnPesquisar);
@@ -267,10 +314,10 @@ namespace atividadeviagem.View
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DateTimePicker dtpIda;
         private System.Windows.Forms.DateTimePicker dtpVolta;
-        private System.Windows.Forms.ComboBox cbxDestino;
-        private System.Windows.Forms.ComboBox cbxOrigem;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.MaskedTextBox tbxValor;
         private System.Windows.Forms.OpenFileDialog openFileDialogImage;
+        private System.Windows.Forms.ComboBox cbxDestino;
+        private System.Windows.Forms.ComboBox cbxOrigem;
     }
 }

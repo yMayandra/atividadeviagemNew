@@ -29,6 +29,7 @@ namespace atividadeviagem.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPesquisarCliente));
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +64,14 @@ namespace atividadeviagem.View
             // 
             // dataGridViewCliente
             // 
+            this.dataGridViewCliente.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nome,
             this.Email,
             this.Foto});
+            this.dataGridViewCliente.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridViewCliente.Location = new System.Drawing.Point(66, 59);
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.RowHeadersVisible = false;
@@ -99,10 +102,10 @@ namespace atividadeviagem.View
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(12, 43);
+            this.lblTitulo.Font = new System.Drawing.Font("Times New Roman", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(220, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(533, 76);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Pesquisar Cliente";
             // 
@@ -110,7 +113,7 @@ namespace atividadeviagem.View
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 88);
+            this.tabControl1.Location = new System.Drawing.Point(12, 103);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(583, 337);
@@ -118,26 +121,30 @@ namespace atividadeviagem.View
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.tabPage1.Controls.Add(this.btnBuscarNomeCli);
             this.tabPage1.Controls.Add(this.tbxNomeCli);
             this.tabPage1.Controls.Add(this.lblNomeCli);
             this.tabPage1.Controls.Add(this.dataGridViewCliente);
+            this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(575, 309);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pesquisar Nome";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnBuscarNomeCli
             // 
+            this.btnBuscarNomeCli.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnBuscarNomeCli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarNomeCli.ForeColor = System.Drawing.Color.White;
             this.btnBuscarNomeCli.Location = new System.Drawing.Point(409, 30);
             this.btnBuscarNomeCli.Name = "btnBuscarNomeCli";
             this.btnBuscarNomeCli.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarNomeCli.TabIndex = 3;
             this.btnBuscarNomeCli.Text = "Buscar";
-            this.btnBuscarNomeCli.UseVisualStyleBackColor = true;
+            this.btnBuscarNomeCli.UseVisualStyleBackColor = false;
             this.btnBuscarNomeCli.Click += new System.EventHandler(this.btnBuscarNomeCli_Click);
             // 
             // tbxNomeCli
@@ -150,15 +157,17 @@ namespace atividadeviagem.View
             // lblNomeCli
             // 
             this.lblNomeCli.AutoSize = true;
-            this.lblNomeCli.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomeCli.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomeCli.ForeColor = System.Drawing.Color.White;
             this.lblNomeCli.Location = new System.Drawing.Point(44, 33);
             this.lblNomeCli.Name = "lblNomeCli";
-            this.lblNomeCli.Size = new System.Drawing.Size(158, 17);
+            this.lblNomeCli.Size = new System.Drawing.Size(150, 16);
             this.lblNomeCli.TabIndex = 1;
             this.lblNomeCli.Text = "Digite o nome do Cliente ";
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.tabPage2.Controls.Add(this.tbxCodCli);
             this.tabPage2.Controls.Add(this.lblCodCli);
             this.tabPage2.Controls.Add(this.btnBucarImgCli);
@@ -178,11 +187,10 @@ namespace atividadeviagem.View
             this.tabPage2.Size = new System.Drawing.Size(575, 309);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar Codigo";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tbxCodCli
             // 
-            this.tbxCodCli.Location = new System.Drawing.Point(188, 42);
+            this.tbxCodCli.Location = new System.Drawing.Point(191, 41);
             this.tbxCodCli.Name = "tbxCodCli";
             this.tbxCodCli.Size = new System.Drawing.Size(161, 23);
             this.tbxCodCli.TabIndex = 19;
@@ -191,7 +199,7 @@ namespace atividadeviagem.View
             // 
             this.lblCodCli.AutoSize = true;
             this.lblCodCli.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCodCli.Location = new System.Drawing.Point(12, 45);
+            this.lblCodCli.Location = new System.Drawing.Point(12, 44);
             this.lblCodCli.Name = "lblCodCli";
             this.lblCodCli.Size = new System.Drawing.Size(162, 17);
             this.lblCodCli.TabIndex = 18;
@@ -199,47 +207,55 @@ namespace atividadeviagem.View
             // 
             // btnBucarImgCli
             // 
-            this.btnBucarImgCli.Location = new System.Drawing.Point(371, 211);
+            this.btnBucarImgCli.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnBucarImgCli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBucarImgCli.Location = new System.Drawing.Point(371, 220);
             this.btnBucarImgCli.Name = "btnBucarImgCli";
             this.btnBucarImgCli.Size = new System.Drawing.Size(75, 23);
             this.btnBucarImgCli.TabIndex = 17;
             this.btnBucarImgCli.Text = "Pesquisar ";
-            this.btnBucarImgCli.UseVisualStyleBackColor = true;
+            this.btnBucarImgCli.UseVisualStyleBackColor = false;
             this.btnBucarImgCli.Click += new System.EventHandler(this.btnBucarImgCli_Click);
             // 
             // btnDeletarCli
             // 
+            this.btnDeletarCli.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDeletarCli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletarCli.Location = new System.Drawing.Point(250, 269);
             this.btnDeletarCli.Name = "btnDeletarCli";
             this.btnDeletarCli.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarCli.TabIndex = 16;
             this.btnDeletarCli.Text = "Deletar";
-            this.btnDeletarCli.UseVisualStyleBackColor = true;
+            this.btnDeletarCli.UseVisualStyleBackColor = false;
             this.btnDeletarCli.Click += new System.EventHandler(this.btnDeletarCli_Click);
             // 
             // btnbuscarCodCli
             // 
+            this.btnbuscarCodCli.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnbuscarCodCli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnbuscarCodCli.Location = new System.Drawing.Point(371, 41);
             this.btnbuscarCodCli.Name = "btnbuscarCodCli";
             this.btnbuscarCodCli.Size = new System.Drawing.Size(75, 23);
             this.btnbuscarCodCli.TabIndex = 15;
             this.btnbuscarCodCli.Text = "Buscar ";
-            this.btnbuscarCodCli.UseVisualStyleBackColor = true;
+            this.btnbuscarCodCli.UseVisualStyleBackColor = false;
             this.btnbuscarCodCli.Click += new System.EventHandler(this.btnbuscarCodCli_Click);
             // 
             // btnAlterarCli
             // 
+            this.btnAlterarCli.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnAlterarCli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarCli.Location = new System.Drawing.Point(160, 269);
             this.btnAlterarCli.Name = "btnAlterarCli";
             this.btnAlterarCli.Size = new System.Drawing.Size(75, 23);
             this.btnAlterarCli.TabIndex = 14;
             this.btnAlterarCli.Text = "Alterar";
-            this.btnAlterarCli.UseVisualStyleBackColor = true;
+            this.btnAlterarCli.UseVisualStyleBackColor = false;
             this.btnAlterarCli.Click += new System.EventHandler(this.btnAlterarCli_Click);
             // 
             // pbxImage
             // 
-            this.pbxImage.BackColor = System.Drawing.Color.Black;
+            this.pbxImage.BackColor = System.Drawing.Color.SkyBlue;
             this.pbxImage.Location = new System.Drawing.Point(338, 86);
             this.pbxImage.Name = "pbxImage";
             this.pbxImage.Size = new System.Drawing.Size(146, 119);
@@ -302,9 +318,12 @@ namespace atividadeviagem.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitulo);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaPesquisarCliente";
             this.Text = "TelaPesquisarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
